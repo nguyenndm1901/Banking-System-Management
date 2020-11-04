@@ -20,3 +20,4 @@ C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\o
 C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.pdb
 C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmDangKy.resources
 C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmQuenMatKhau.resources
+C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmMain.resources
