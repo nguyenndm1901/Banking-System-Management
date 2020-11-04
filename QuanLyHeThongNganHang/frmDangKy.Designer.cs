@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangKy));
             this.btnSignUp = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.labelEmail = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.labelPasword = new System.Windows.Forms.Label();
             this.labelLogIn = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.labelEmail = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.backMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
@@ -68,6 +68,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(275, 166);
             this.panel1.TabIndex = 11;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(115, 61);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(157, 20);
+            this.txtEmail.TabIndex = 6;
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Location = new System.Drawing.Point(3, 64);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(38, 13);
+            this.labelEmail.TabIndex = 5;
+            this.labelEmail.Text = "E-mail:";
             // 
             // labelUsername
             // 
@@ -112,22 +128,6 @@
             this.labelLogIn.TabIndex = 9;
             this.labelLogIn.Text = "ĐĂNG KÝ";
             this.labelLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(115, 61);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(157, 20);
-            this.txtEmail.TabIndex = 6;
-            // 
-            // labelEmail
-            // 
-            this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(3, 64);
-            this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(38, 13);
-            this.labelEmail.TabIndex = 5;
-            this.labelEmail.Text = "E-mail:";
             // 
             // menuStrip1
             // 
