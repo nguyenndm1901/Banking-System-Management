@@ -1,0 +1,10 @@
+C:\Users\Nguyen\source\repos\QuanLyHeThongNganHang\QuanLyHeThongNganHang\bin\Debug\QuanLyHeThongNganHang.exe.config
+C:\Users\Nguyen\source\repos\QuanLyHeThongNganHang\QuanLyHeThongNganHang\bin\Debug\QuanLyHeThongNganHang.exe
+C:\Users\Nguyen\source\repos\QuanLyHeThongNganHang\QuanLyHeThongNganHang\bin\Debug\QuanLyHeThongNganHang.pdb
+C:\Users\Nguyen\source\repos\QuanLyHeThongNganHang\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.csprojAssemblyReference.cache
+C:\Users\Nguyen\source\repos\QuanLyHeThongNganHang\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmDangNhap.resources
+C:\Users\Nguyen\source\repos\QuanLyHeThongNganHang\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.Properties.Resources.resources
+C:\Users\Nguyen\source\repos\QuanLyHeThongNganHang\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.csproj.GenerateResource.cache
+C:\Users\Nguyen\source\repos\QuanLyHeThongNganHang\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.csproj.CoreCompileInputs.cache
+C:\Users\Nguyen\source\repos\QuanLyHeThongNganHang\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.exe
+C:\Users\Nguyen\source\repos\QuanLyHeThongNganHang\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.pdb
