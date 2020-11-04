@@ -33,10 +33,10 @@
             this.labelPasword = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.labelForgot = new System.Windows.Forms.Label();
             this.btnSignIn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSignUp = new System.Windows.Forms.Button();
+            this.btnForgot = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,18 +85,6 @@
             this.txtPassword.Size = new System.Drawing.Size(157, 20);
             this.txtPassword.TabIndex = 4;
             // 
-            // labelForgot
-            // 
-            this.labelForgot.AutoSize = true;
-            this.labelForgot.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelForgot.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.labelForgot.Location = new System.Drawing.Point(3, 123);
-            this.labelForgot.Name = "labelForgot";
-            this.labelForgot.Size = new System.Drawing.Size(86, 13);
-            this.labelForgot.TabIndex = 5;
-            this.labelForgot.Text = "Quên mật khẩu?";
-            this.labelForgot.Click += new System.EventHandler(this.labelForgot_Click);
-            // 
             // btnSignIn
             // 
             this.btnSignIn.Location = new System.Drawing.Point(12, 300);
@@ -105,14 +93,15 @@
             this.btnSignIn.TabIndex = 6;
             this.btnSignIn.Text = "Đăng Nhập";
             this.btnSignIn.UseVisualStyleBackColor = true;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnForgot);
             this.panel1.Controls.Add(this.labelUsername);
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.labelPasword);
-            this.panel1.Controls.Add(this.labelForgot);
             this.panel1.Location = new System.Drawing.Point(12, 105);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(275, 166);
@@ -126,6 +115,23 @@
             this.btnSignUp.TabIndex = 8;
             this.btnSignUp.Text = "Đăng Ký";
             this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
+            // 
+            // btnForgot
+            // 
+            this.btnForgot.BackColor = System.Drawing.SystemColors.Control;
+            this.btnForgot.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnForgot.FlatAppearance.BorderSize = 0;
+            this.btnForgot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnForgot.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForgot.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnForgot.Location = new System.Drawing.Point(6, 118);
+            this.btnForgot.Name = "btnForgot";
+            this.btnForgot.Size = new System.Drawing.Size(107, 23);
+            this.btnForgot.TabIndex = 9;
+            this.btnForgot.Text = "Quên mật khẩu?";
+            this.btnForgot.UseVisualStyleBackColor = false;
+            this.btnForgot.Click += new System.EventHandler(this.btnForgot_Click);
             // 
             // frmDangNhap
             // 
@@ -152,9 +158,9 @@
         private System.Windows.Forms.Label labelPasword;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label labelForgot;
         private System.Windows.Forms.Button btnSignIn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSignUp;
+        private System.Windows.Forms.Button btnForgot;
     }
 }

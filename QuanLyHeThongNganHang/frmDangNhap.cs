@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,22 +16,39 @@ namespace QuanLyHeThongNganHang
         public frmDangNhap()
         {
             InitializeComponent();
+            btnForgot.FlatAppearance.MouseOverBackColor = btnForgot.BackColor;
+            btnForgot.BackColorChanged += (s, e) => {
+                btnForgot.FlatAppearance.MouseOverBackColor = btnForgot.BackColor;
+            };
         }
 
-        private void labelForgot_Click(object sender, EventArgs e)
+        private void showForgot()
         {
-            Label labelForgot = sender as Label;
+            frmQuenMatKhau forgot = new frmQuenMatKhau();
+            forgot.ShowDialog();
+        }
 
-            if (labelForgot != null)
-            {
-                // If the clicked label is black, the player clicked
-                // an icon that's already been revealed --
-                // ignore the click
-                if (labelForgot.ForeColor == Color.Black)
-                    return;
+        private void btnForgot_Click(object sender, EventArgs e)
+        {
+            Thread thread = new Thread(new ThreadStart(showForgot));
+            thread.Start();
+        }
 
-                labelForgot.ForeColor = Color.Black;
-            }
+        private void btnSignIn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showSignUp()
+        {
+            frmDangKy signup = new frmDangKy();
+            signup.ShowDialog();
+        }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            Thread thread = new Thread(new ThreadStart(showSignUp));
+            thread.Start();
         }
     }
 }
