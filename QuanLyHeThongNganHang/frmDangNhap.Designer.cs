@@ -35,8 +35,8 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnSignIn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSignUp = new System.Windows.Forms.Button();
             this.btnForgot = new System.Windows.Forms.Button();
+            this.btnSignUp = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,6 +82,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(115, 79);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(157, 20);
             this.txtPassword.TabIndex = 4;
             // 
@@ -107,16 +108,6 @@
             this.panel1.Size = new System.Drawing.Size(275, 166);
             this.panel1.TabIndex = 7;
             // 
-            // btnSignUp
-            // 
-            this.btnSignUp.Location = new System.Drawing.Point(174, 300);
-            this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(113, 40);
-            this.btnSignUp.TabIndex = 8;
-            this.btnSignUp.Text = "Đăng Ký";
-            this.btnSignUp.UseVisualStyleBackColor = true;
-            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
-            // 
             // btnForgot
             // 
             this.btnForgot.BackColor = System.Drawing.SystemColors.Control;
@@ -132,6 +123,16 @@
             this.btnForgot.Text = "Quên mật khẩu?";
             this.btnForgot.UseVisualStyleBackColor = false;
             this.btnForgot.Click += new System.EventHandler(this.btnForgot_Click);
+            // 
+            // btnSignUp
+            // 
+            this.btnSignUp.Location = new System.Drawing.Point(174, 300);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(113, 40);
+            this.btnSignUp.TabIndex = 8;
+            this.btnSignUp.Text = "Đăng Ký";
+            this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // frmDangNhap
             // 
