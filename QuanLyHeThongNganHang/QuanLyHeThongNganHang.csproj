@@ -126,14 +126,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\enter.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rsz_enter.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rsz_1rsz_enter.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
