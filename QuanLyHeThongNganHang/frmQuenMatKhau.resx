@@ -117,6 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnReset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJ
+        TUUH5AsEFBItn7dyeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAK8SURBVEhL
+        bZRJ6I9BGMfHvhZFiuzbRbY4iFKEgxQHF5StKImkrAckoYSDpOzZDrYUKVH+ZcmSg0TZspQly/+inH0+
+        M+/z6+XvW593npl35plnnlkSauWnKsNuW5Ur4Te8gg/wHn7BVFBtIMbV/TRkpXVV6rQ9qKuwvJipZ1Xu
+        hT3FTB3A/vXxquFcw9nDYfx4ABOK2fi3FC4Us7Ey/7VwrEN1Ej6C0QyDHeDSu4MdO4EaBc3gBGPgBPyA
+        TaBisqy58BRGwAHQ4RUYACqisVTj4T6Y++0wEV6Dk6rcrx3odKYVZGNHiJmdbDPshzXQH5T5lVjxerhR
+        zNK2E85pIHPlRJGrQ2D0h2EbnIVPsBGUDuxvaUBPYDZkmddFxcxRRgTH4DYYlYr23vAGjFA5RufKVZ0v
+        ZkrT4RuszrWiyfAM4iQ4UKI+BN5C31wr2gdO6L+GBsIXcBPVQXBTVDiL9ET9IqwqZtoNpiFOTt68ztlM
+        6TSsKGYetLiYeanh1DI2dQt4C69X5TJQThynJ/UAN2lBrqV0BOJcRv7CeQzqBqZsGkyCiDb2Ip9JN9AI
+        QrPgYTGzI50baTjtAl6kR3CnKu0/BVQ+kj4usYz6YN+JU8XM0Ua7qTOfl2AQ2O7y54GHYAPchbxRxzWQ
+        HWLpLu0aeDpMyxxQR8GjqFx2fdKhoPN3VrrCczBfKg575HQGGPlnGAdG2wtUfYULYR3o66cNagncgz7g
+        4/MSjMpNVYPB6+q1v2kD+jdan1dXswtyauPHZfgOvnI+Kl5jJzA9LtFbqONboMJxrKyF4ocPj0dIRZs7
+        PbaY6TF4rCzjxtXPuHbcUO0sf0ZebYz3wc2bX8x0BtbCVvBJVTEmnP+laKx3iBm9sl+hCXwbXoCTmm9T
+        4mrc/EjnfyeoKzqYx+EwGnyX+1Vt4lvisfIejARlO0rpD6H2c2UJDpHQAAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuenMatKhau));
             this.labelForgot = new System.Windows.Forms.Label();
             this.panelForgot = new System.Windows.Forms.Panel();
             this.labelEmail = new System.Windows.Forms.Label();
@@ -102,11 +103,13 @@
             // 
             // btnReset
             // 
+            this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
             this.btnReset.Location = new System.Drawing.Point(102, 188);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(106, 37);
             this.btnReset.TabIndex = 2;
             this.btnReset.Text = "Khôi phục";
+            this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
