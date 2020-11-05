@@ -151,6 +151,7 @@
             this.Controls.Add(this.labelLogIn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

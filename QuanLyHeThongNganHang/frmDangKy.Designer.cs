@@ -156,6 +156,7 @@
             this.Controls.Add(this.labelLogIn);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmDangKy";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Ký";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

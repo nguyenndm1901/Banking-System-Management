@@ -89,7 +89,7 @@ namespace QuanLyHeThongNganHang
                 {
                     Thread thread = new Thread(new ThreadStart(showMain));
                     thread.Start();
-                    //this.Close();
+                    this.Close();
                 }
             }
         }

@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuenMatKhau));
             this.labelForgot = new System.Windows.Forms.Label();
             this.panelForgot = new System.Windows.Forms.Panel();
-            this.labelEmail = new System.Windows.Forms.Label();
-            this.labelPassword = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnReset = new System.Windows.Forms.Button();
             this.txtConfirm = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.labelPassword = new System.Windows.Forms.Label();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.btnReset = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.backMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.panelForgot.SuspendLayout();
@@ -68,51 +68,6 @@
             this.panelForgot.Size = new System.Drawing.Size(290, 124);
             this.panelForgot.TabIndex = 1;
             // 
-            // labelEmail
-            // 
-            this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(3, 21);
-            this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(38, 13);
-            this.labelEmail.TabIndex = 2;
-            this.labelEmail.Text = "E-mail:";
-            // 
-            // labelPassword
-            // 
-            this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(3, 59);
-            this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(55, 13);
-            this.labelPassword.TabIndex = 4;
-            this.labelPassword.Text = "Mật khẩu:";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(90, 18);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(197, 20);
-            this.txtEmail.TabIndex = 5;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(90, 56);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(197, 20);
-            this.txtPassword.TabIndex = 7;
-            // 
-            // btnReset
-            // 
-            this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
-            this.btnReset.Location = new System.Drawing.Point(102, 188);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(106, 37);
-            this.btnReset.TabIndex = 2;
-            this.btnReset.Text = "Khôi phục";
-            this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
             // txtConfirm
             // 
             this.txtConfirm.Location = new System.Drawing.Point(90, 96);
@@ -129,6 +84,51 @@
             this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Xác nhận:";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(90, 56);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(197, 20);
+            this.txtPassword.TabIndex = 7;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(90, 18);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(197, 20);
+            this.txtEmail.TabIndex = 5;
+            // 
+            // labelPassword
+            // 
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Location = new System.Drawing.Point(3, 59);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(55, 13);
+            this.labelPassword.TabIndex = 4;
+            this.labelPassword.Text = "Mật khẩu:";
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Location = new System.Drawing.Point(3, 21);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(38, 13);
+            this.labelEmail.TabIndex = 2;
+            this.labelEmail.Text = "E-mail:";
+            // 
+            // btnReset
+            // 
+            this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
+            this.btnReset.Location = new System.Drawing.Point(102, 188);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(106, 37);
+            this.btnReset.TabIndex = 2;
+            this.btnReset.Text = "Khôi phục";
+            this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // menuStrip1
             // 
@@ -159,6 +159,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmQuenMatKhau";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quên Mật Khẩu";
             this.panelForgot.ResumeLayout(false);
             this.panelForgot.PerformLayout();
