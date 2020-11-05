@@ -81,18 +81,28 @@ namespace QuanLyHeThongNganHang
                 if (isExisted())
                 {
                     MessageBox.Show("Tên đăng nhập hoặc mật khẩu không hợp lệ. Kiểm tra lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //txtUsername.Clear();
                     txtPassword.SelectAll();
                     txtPassword.Focus();
                 }
                 else
                 {
-                    Thread thread = new Thread(new ThreadStart(showMain));
-                    thread.Start();
-                    this.Close();
+                    Usertype = getUserType(txtUsername.Text, txtPassword.Text);
+                    if (Usertype == "Ngân Hàng")
+                    {
+                        Thread thread = new Thread(new ThreadStart(showMain));
+                        thread.Start();
+                        this.Dispose();
+                    }
+                    if (Usertype == "Khách Hàng")
+                    {
+                        Thread thread = new Thread(new ThreadStart(showKhachHang));
+                        thread.Start();
+                        this.Dispose();
+                    }
                 }
             }
         }
+        public static string Usertype = "";
 
         private void showMain()
         {
@@ -100,17 +110,51 @@ namespace QuanLyHeThongNganHang
             main.ShowDialog();
         }
 
+        private void showKhachHang()
+        {
+            frmGuiDon guidon = new frmGuiDon();
+            guidon.ShowDialog();
+        }
+
         private void showSignUp()
         {
-            frmDangKy signup = new frmDangKy();
+            frmLoaiTaiKhoan signup = new frmLoaiTaiKhoan();
             signup.ShowDialog();
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
-        {
+        {           
             Thread thread = new Thread(new ThreadStart(showSignUp));
             thread.Start();
-            this.Dispose();
+            this.Close();
+        }
+
+
+        private string getUserType(string username, string password)
+        {
+            string usertype = "";
+            try
+            {
+                string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"];
+                SqlConnection con = new SqlConnection(ConnectionString);
+                SqlCommand cmd = new SqlCommand("Select * from DangNhap where username = '" + username + "' and password = '" + password + "'", con);
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt != null)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        usertype = dr["usertype"].ToString();
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Truy vấn thất bại !");
+            }
+            return usertype;
         }
     }
 }

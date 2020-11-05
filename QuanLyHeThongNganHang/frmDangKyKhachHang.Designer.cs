@@ -1,6 +1,6 @@
 ﻿namespace QuanLyHeThongNganHang
 {
-    partial class frmDangKy
+    partial class frmDangKyKhachHang
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangKy));
-            this.btnSignUp = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangKyKhachHang));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelUserType = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.labelEmail = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
@@ -40,24 +40,16 @@
             this.labelLogIn = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.backMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSignUp = new System.Windows.Forms.Button();
+            this.txtUserType = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnSignUp
-            // 
-            this.btnSignUp.Image = ((System.Drawing.Image)(resources.GetObject("btnSignUp.Image")));
-            this.btnSignUp.Location = new System.Drawing.Point(91, 306);
-            this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(113, 40);
-            this.btnSignUp.TabIndex = 12;
-            this.btnSignUp.Text = "Đăng Ký";
-            this.btnSignUp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSignUp.UseVisualStyleBackColor = true;
-            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
-            // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtUserType);
+            this.panel1.Controls.Add(this.labelUserType);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.labelEmail);
             this.panel1.Controls.Add(this.labelUsername);
@@ -66,8 +58,17 @@
             this.panel1.Controls.Add(this.labelPasword);
             this.panel1.Location = new System.Drawing.Point(12, 134);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(275, 166);
+            this.panel1.Size = new System.Drawing.Size(275, 186);
             this.panel1.TabIndex = 11;
+            // 
+            // labelUserType
+            // 
+            this.labelUserType.AutoSize = true;
+            this.labelUserType.Location = new System.Drawing.Point(3, 142);
+            this.labelUserType.Name = "labelUserType";
+            this.labelUserType.Size = new System.Drawing.Size(77, 13);
+            this.labelUserType.TabIndex = 7;
+            this.labelUserType.Text = "Loại tài khoản:";
             // 
             // txtEmail
             // 
@@ -146,7 +147,30 @@
             this.backMenu.Text = "Quay Về";
             this.backMenu.Click += new System.EventHandler(this.backMenu_Click);
             // 
-            // frmDangKy
+            // btnSignUp
+            // 
+            this.btnSignUp.Image = ((System.Drawing.Image)(resources.GetObject("btnSignUp.Image")));
+            this.btnSignUp.Location = new System.Drawing.Point(88, 326);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(113, 40);
+            this.btnSignUp.TabIndex = 12;
+            this.btnSignUp.Text = "Đăng Ký";
+            this.btnSignUp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
+            // 
+            // txtUserType
+            // 
+            this.txtUserType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUserType.Location = new System.Drawing.Point(115, 139);
+            this.txtUserType.Name = "txtUserType";
+            this.txtUserType.ReadOnly = true;
+            this.txtUserType.Size = new System.Drawing.Size(157, 13);
+            this.txtUserType.TabIndex = 8;
+            this.txtUserType.Text = "Khách Hàng";
+            this.txtUserType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // frmDangKyKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -155,7 +179,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelLogIn);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "frmDangKy";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "frmDangKyKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Ký";
             this.panel1.ResumeLayout(false);
@@ -180,5 +205,7 @@
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem backMenu;
+        private System.Windows.Forms.Label labelUserType;
+        private System.Windows.Forms.TextBox txtUserType;
     }
 }

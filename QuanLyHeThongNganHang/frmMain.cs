@@ -30,5 +30,18 @@ namespace QuanLyHeThongNganHang
             thread.Start();
             this.Dispose();
         }
+
+        private void showDangNhap()
+        {
+            frmDangNhap dangnhap = new frmDangNhap();
+            dangnhap.ShowDialog();
+        }
+
+        private void thoátĐăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thread thread = new Thread(new ThreadStart(showDangNhap));
+            thread.Start();
+            this.Dispose();
+        }
     }
 }

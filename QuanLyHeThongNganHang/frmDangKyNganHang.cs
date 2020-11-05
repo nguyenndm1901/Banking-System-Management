@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace QuanLyHeThongNganHang
 {
-    public partial class frmDangKy : Form
+    public partial class frmDangKyNganHang : Form
     {
-        public frmDangKy()
+        public frmDangKyNganHang()
         {
             InitializeComponent();
         }
@@ -63,16 +63,16 @@ namespace QuanLyHeThongNganHang
                 txtUsername.Focus();
                 return false;
             }
-            if (txtPassword.Text.Trim() == string.Empty)
-            {
-                MessageBox.Show("Yêu cầu mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtPassword.Focus();
-                return false;
-            }
             if (txtEmail.Text.Trim() == string.Empty)
             {
                 MessageBox.Show("Yêu cầu e-mail.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
+                return false;
+            }
+            if (txtPassword.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Yêu cầu mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtPassword.Focus();
                 return false;
             }
             if (isEmailExisted())
@@ -105,11 +105,12 @@ namespace QuanLyHeThongNganHang
                 using (SqlConnection cnn = new SqlConnection(ConnectionString))
                 {
                     cnn.Open();
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO [DangNhap](username,password,email) VALUES (@username,@password,@email)", cnn))
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO [DangNhap](username,password,email,usertype) VALUES (@username,@password,@email,@usertype)", cnn))
                     {
-                        cmd.Parameters.AddWithValue("@username", txtUsername.Text);
-                        cmd.Parameters.AddWithValue("@password", txtPassword.Text);
-                        cmd.Parameters.AddWithValue("@email", txtEmail.Text);
+                        cmd.Parameters.AddWithValue("@username", txtUsername.Text.Trim());
+                        cmd.Parameters.AddWithValue("@password", txtPassword.Text.Trim());
+                        cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
+                        cmd.Parameters.AddWithValue("@usertype", txtUserType.Text.Trim());
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -121,6 +122,19 @@ namespace QuanLyHeThongNganHang
             }
         }
 
+        private void showLogIn()
+        {
+            frmDangNhap login = new frmDangNhap();
+            login.ShowDialog();
+        }
+
+        private void quayVềToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thread thread = new Thread(new ThreadStart(showLogIn));
+            thread.Start();
+            this.Dispose();
+        }
+
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             if (IsValidated())
@@ -130,19 +144,6 @@ namespace QuanLyHeThongNganHang
                 txtPassword.Clear();
                 txtUsername.Clear();
             }
-        }
-
-        private void showLogIn()
-        {
-            frmDangNhap login = new frmDangNhap();
-            login.ShowDialog();
-        }
-
-        private void backMenu_Click(object sender, EventArgs e)
-        {
-            Thread thread = new Thread(new ThreadStart(showLogIn));
-            thread.Start();
-            this.Dispose();
         }
     }
 }

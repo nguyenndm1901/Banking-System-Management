@@ -129,7 +129,7 @@
             // 
             // btnSignIn
             // 
-            this.btnSignIn.Image = ((System.Drawing.Image)(resources.GetObject("btnSignIn.Image")));
+            this.btnSignIn.Image = global::QuanLyHeThongNganHang.Properties.Resources.rsz_enter;
             this.btnSignIn.ImageKey = "(none)";
             this.btnSignIn.Location = new System.Drawing.Point(12, 300);
             this.btnSignIn.Name = "btnSignIn";

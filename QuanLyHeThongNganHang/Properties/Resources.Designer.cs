@@ -59,5 +59,15 @@ namespace QuanLyHeThongNganHang.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rsz_enter {
+            get {
+                object obj = ResourceManager.GetObject("rsz_enter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

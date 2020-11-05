@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace QuanLyHeThongNganHang
 {
-    public partial class frmQuenMatKhau : Form
+    public partial class frmDangKyKhachHang : Form
     {
-        public frmQuenMatKhau()
+        public frmDangKyKhachHang()
         {
             InitializeComponent();
         }
@@ -31,15 +31,38 @@ namespace QuanLyHeThongNganHang
             SqlDataAdapter email_kiemtra = new SqlDataAdapter("Select email from DangNhap where email = '" + email + "'", con);
             DataTable dt_email_kiemtra = new DataTable();
             email_kiemtra.Fill(dt_email_kiemtra);
-            if (dt_email_kiemtra.Rows.Count <= 0)
+            if (dt_email_kiemtra.Rows.Count > 0)
             {
                 check = true;
             }
             return check;
         }
-    
+        private bool isUserExisted()
+        {
+            bool check = false;
+            string user = txtUsername.Text;
+            string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"];
+            SqlConnection con = new SqlConnection(ConnectionString);
+            SqlCommand cmd = new SqlCommand("Select * from DangNhap", con);
+            con.Open();
+            SqlDataAdapter user_kiemtra = new SqlDataAdapter("Select username from DangNhap where username = '" + user + "'", con);
+            DataTable dt_user_kiemtra = new DataTable();
+            user_kiemtra.Fill(dt_user_kiemtra);
+            if (dt_user_kiemtra.Rows.Count > 0)
+            {
+                check = true;
+            }
+            return check;
+        }
+
         private bool IsValidated()
         {
+            if (txtUsername.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Yêu cầu tên đăng nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUsername.Focus();
+                return false;
+            }
             if (txtEmail.Text.Trim() == string.Empty)
             {
                 MessageBox.Show("Yêu cầu e-mail.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -52,24 +75,18 @@ namespace QuanLyHeThongNganHang
                 txtPassword.Focus();
                 return false;
             }
-            if (txtConfirm.Text.Trim() == string.Empty)
-            {
-                MessageBox.Show("Xác nhận lại mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtConfirm.Focus();
-                return false;
-            }
-            if (txtConfirm.Text.Trim() != txtPassword.Text.Trim())
-            {
-                MessageBox.Show("Mật khẩu không khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtConfirm.SelectAll();
-                txtConfirm.Focus();
-                return false;
-            }
             if (isEmailExisted())
             {
-                MessageBox.Show("E-mail không tồn tại. Kiểm tra lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("E-mail đã tồn tại. Kiểm tra lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.SelectAll();
                 txtEmail.Focus();
+                return false;
+            }
+            if (isUserExisted())
+            {
+                MessageBox.Show("Tài khoản đã tồn tại. Kiểm tra lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUsername.SelectAll();
+                txtUsername.Focus();
                 return false;
             }
             return true;
@@ -88,14 +105,16 @@ namespace QuanLyHeThongNganHang
                 using (SqlConnection cnn = new SqlConnection(ConnectionString))
                 {
                     cnn.Open();
-                    using (SqlCommand cmd = new SqlCommand("UPDATE [DangNhap] SET password = @password WHERE username =(SELECT username FROM DangNhap WHERE email = @email)", cnn))
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO [DangNhap](username,password,email,usertype) VALUES (@username,@password,@email,@usertype)", cnn))
                     {
-                        cmd.Parameters.AddWithValue("@password", txtConfirm.Text);
-                        cmd.Parameters.AddWithValue("@email", txtEmail.Text);
+                        cmd.Parameters.AddWithValue("@username", txtUsername.Text.Trim());
+                        cmd.Parameters.AddWithValue("@password", txtPassword.Text.Trim());
+                        cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
+                        cmd.Parameters.AddWithValue("@usertype", txtUserType.Text.Trim());
                         cmd.ExecuteNonQuery();
                     }
                 }
-                MessageBox.Show("Khôi phục mật khẩu thành công. Nhấn 'Quay Về' để đăng nhập.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Đã đăng ký. Nhấn 'Quay Về' để đăng nhập.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -103,14 +122,14 @@ namespace QuanLyHeThongNganHang
             }
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
+        private void btnSignUp_Click(object sender, EventArgs e)
         {
             if (IsValidated())
             {
                 LuuThongTin((int)Save.save);
                 txtEmail.Clear();
                 txtPassword.Clear();
-                txtConfirm.Clear();
+                txtUsername.Clear();
             }
         }
 
