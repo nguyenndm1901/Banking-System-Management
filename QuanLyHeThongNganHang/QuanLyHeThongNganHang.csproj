@@ -65,6 +65,12 @@
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGiaHanNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGiaHanNo.Designer.cs">
+      <DependentUpon>frmGiaHanNo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGuiDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,11 +95,17 @@
     <Compile Include="frmLoaiTaiKhoan.Designer.cs">
       <DependentUpon>frmLoaiTaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="frmMainKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <Compile Include="frmMainKhachHang.Designer.cs">
+      <DependentUpon>frmMainKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainNganHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainNganHang.Designer.cs">
+      <DependentUpon>frmMainNganHang.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMasterPassword.cs">
       <SubType>Form</SubType>
@@ -124,6 +136,9 @@
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGiaHanNo.resx">
+      <DependentUpon>frmGiaHanNo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGuiDon.resx">
       <DependentUpon>frmGuiDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,8 +148,11 @@
     <EmbeddedResource Include="frmLoaiTaiKhoan.resx">
       <DependentUpon>frmLoaiTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <EmbeddedResource Include="frmMainKhachHang.resx">
+      <DependentUpon>frmMainKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainNganHang.resx">
+      <DependentUpon>frmMainNganHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMasterPassword.resx">
       <DependentUpon>frmMasterPassword.cs</DependentUpon>

@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace QuanLyHeThongNganHang
@@ -64,7 +64,7 @@ namespace QuanLyHeThongNganHang
                         cmd.ExecuteNonQuery();
                     }
                 }
-                MessageBox.Show("Đã đăng ký. Nhấn 'Quay Về' để đăng nhập.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Đã gửi đơn đăng ký.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -81,6 +81,19 @@ namespace QuanLyHeThongNganHang
                 txtSoTien.Clear();
                 txtKyHan.Clear();
             }
+        }
+
+        private void showKhachHang()
+        {
+            frmMainKhachHang main = new frmMainKhachHang();
+            main.ShowDialog();
+        }
+
+        private void quayVềToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thread thread = new Thread(new ThreadStart(showKhachHang));
+            thread.Start();
+            this.Dispose();
         }
     }
 }

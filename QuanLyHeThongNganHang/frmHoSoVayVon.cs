@@ -20,7 +20,7 @@ namespace QuanLyHeThongNganHang
 
         private void showMain()
         {
-            frmMain main = new frmMain();
+            frmMainNganHang main = new frmMainNganHang();
             main.ShowDialog();
         }
 

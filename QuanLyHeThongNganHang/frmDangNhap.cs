@@ -106,13 +106,13 @@ namespace QuanLyHeThongNganHang
 
         private void showMain()
         {
-            frmMain main = new frmMain();
+            frmMainNganHang main = new frmMainNganHang();
             main.ShowDialog();
         }
 
         private void showKhachHang()
         {
-            frmGuiDon guidon = new frmGuiDon();
+            frmMainKhachHang guidon = new frmMainKhachHang();
             guidon.ShowDialog();
         }
 

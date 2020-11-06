@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace QuanLyHeThongNganHang
 {
-    public partial class frmMain : Form
+    public partial class frmMainNganHang : Form
     {
-        public frmMain()
+        public frmMainNganHang()
         {
             InitializeComponent();
         }
