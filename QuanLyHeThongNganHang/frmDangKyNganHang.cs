@@ -18,6 +18,7 @@ namespace QuanLyHeThongNganHang
         public frmDangKyNganHang()
         {
             InitializeComponent();
+            Load();
         }
 
         private bool isEmailExisted()
@@ -105,11 +106,13 @@ namespace QuanLyHeThongNganHang
                 using (SqlConnection cnn = new SqlConnection(ConnectionString))
                 {
                     cnn.Open();
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO [DangNhap](username,password,email,usertype) VALUES (@username,@password,@email,@usertype)", cnn))
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO [DangNhap](id,hoten,username,password,email,usertype) VALUES (@id,@hoten,@username,@password,@email,@usertype)", cnn))
                     {
+                        cmd.Parameters.AddWithValue("@id", txtID.Text.Trim());
+                        cmd.Parameters.AddWithValue("@hoten", txtHoTen.Text.Trim());
                         cmd.Parameters.AddWithValue("@username", txtUsername.Text.Trim());
                         cmd.Parameters.AddWithValue("@password", txtPassword.Text.Trim());
-                        cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
+                        cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim() + txtAdmin.Text.Trim());
                         cmd.Parameters.AddWithValue("@usertype", txtUserType.Text.Trim());
                         cmd.ExecuteNonQuery();
                     }
@@ -135,6 +138,52 @@ namespace QuanLyHeThongNganHang
             this.Dispose();
         }
 
+        private bool check(string id)
+        {
+            bool MaNhanVienExist = false;
+            string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"];
+            using (SqlConnection cnn = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM DangNhap WHERE [id] = @id", cnn))
+                {
+                    cnn.Open();
+                    cmd.Parameters.AddWithValue("@id", id);
+                    DataTable dtAnyData = new DataTable();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    dtAnyData.Load(reader);
+                    if (dtAnyData.Rows.Count > 0)
+                    {
+                        MaNhanVienExist = true;
+                    }
+                }
+            }
+            return MaNhanVienExist;
+        }
+
+        private string GenerateID()
+        {
+            string id;
+            Random ran = new Random();
+            long orderpart1 = ran.Next(100, 999);
+            int orderpart2 = ran.Next(0, 99);
+            id = "NH" + "-" + orderpart1 + "-" + orderpart2;
+            return id;
+        }
+
+        private void Load()
+        {
+            string id;
+            bool isMaNhanVienExisted = true;
+            while (isMaNhanVienExisted)
+            {
+                id = GenerateID();
+                isMaNhanVienExisted = check(id);
+                txtID.Text = id;
+            }
+            txtHoTen.Select();
+            txtHoTen.Focus();
+        }
+
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             if (IsValidated())
@@ -144,6 +193,12 @@ namespace QuanLyHeThongNganHang
                 txtPassword.Clear();
                 txtUsername.Clear();
             }
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            txtEmail.Text = tb.Text;
         }
     }
 }

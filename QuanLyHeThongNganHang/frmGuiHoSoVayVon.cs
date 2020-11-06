@@ -12,19 +12,28 @@ using System.Windows.Forms;
 
 namespace QuanLyHeThongNganHang
 {
-    public partial class frmGuiDon : Form
+    public partial class frmGuiHoSoVayVon : Form
     {
-        public frmGuiDon()
+        public delegate void sendName(string tenKH);
+        public sendName Sender;
+
+        public frmGuiHoSoVayVon()
         {
             InitializeComponent();
+            Sender = new sendName(getName);
+            Load();
+        }
+        private void getName(string tenKH)
+        {
+            lblTenKH.Text = tenKH;
         }
 
         private bool IsValidated()
         {
-            if (txtTenKH.Text.Trim() == string.Empty)
+            if (lblTenKH.Text.Trim() == string.Empty)
             {
                 MessageBox.Show("Yêu cầu tên khách hàng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtTenKH.Focus();
+                lblTenKH.Focus();
                 return false;
             }
             if (txtSoTien.Text.Trim() == string.Empty)
@@ -55,12 +64,15 @@ namespace QuanLyHeThongNganHang
                 using (SqlConnection cnn = new SqlConnection(ConnectionString))
                 {
                     cnn.Open();
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO [HoSoVayVon](tenKH,soTien,ngayDangKy,kyHan) VALUES (@tenKH,@soTien,@ngayDangKy,@kyHan)", cnn))
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO [HoSoVayVon](id,tenKH,soTien,ngayDangKy,kyHan,nhanVienDuyet,tinhTrang) VALUES (@id,@tenKH,@soTien,@ngayDangKy,@kyHan,@nhanVienDuyet,@tinhTrang)", cnn))
                     {
-                        cmd.Parameters.AddWithValue("@tenKH", txtTenKH.Text.Trim());
+                        cmd.Parameters.AddWithValue("@id", txtID.Text.Trim());
+                        cmd.Parameters.AddWithValue("@tenKH", lblTenKH.Text.Trim());
                         cmd.Parameters.AddWithValue("@soTien", txtSoTien.Text.Trim());
                         cmd.Parameters.AddWithValue("@ngayDangKy", dateDangKy.Value.ToString("yyyy-MM-dd"));
                         cmd.Parameters.AddWithValue("@kyHan", txtKyHan.Text.Trim());
+                        cmd.Parameters.AddWithValue("@nhanVienDuyet", "Chưa xác định");
+                        cmd.Parameters.AddWithValue("@tinhTrang", "Đang chờ");
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -72,14 +84,60 @@ namespace QuanLyHeThongNganHang
             }
         }
 
+        private bool check(string id)
+        {
+            bool MaHoSoExist = false;
+            string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"];
+            using (SqlConnection cnn = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM HoSoVayVon WHERE [id] = @id", cnn))
+                {
+                    cnn.Open();
+                    cmd.Parameters.AddWithValue("@id", id);
+                    DataTable dtAnyData = new DataTable();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    dtAnyData.Load(reader);
+                    if (dtAnyData.Rows.Count > 0)
+                    {
+                        MaHoSoExist = true;
+                    }
+                }
+            }
+            return MaHoSoExist;
+        }
+
+        private string GenerateID()
+        {
+            string id;
+            Random ran = new Random();
+            long orderpart1 = ran.Next(100, 999);
+            int orderpart2 = ran.Next(0, 99);
+            id = "HSVV" + "-" + orderpart1 + "-" + orderpart2;
+            return id;
+        }
+
+        private void Load()
+        {
+            string id;
+            bool isMaHoSoExisted = true;
+            while (isMaHoSoExisted)
+            {
+                id = GenerateID();
+                isMaHoSoExisted = check(id);
+                txtID.Text = id;
+            }
+            txtSoTien.Select();
+            txtSoTien.Focus();
+        }
+
         private void btnSend_Click(object sender, EventArgs e)
         {
             if (IsValidated())
             {
                 LuuThongTin((int)Save.save);
-                txtTenKH.Clear();
                 txtSoTien.Clear();
                 txtKyHan.Clear();
+                Load();
             }
         }
 

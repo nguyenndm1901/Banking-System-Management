@@ -95,13 +95,16 @@ namespace QuanLyHeThongNganHang
                     }
                     if (Usertype == "Khách Hàng")
                     {
+                        tenKH = getName(txtUsername.Text, txtPassword.Text);
                         Thread thread = new Thread(new ThreadStart(showKhachHang));
                         thread.Start();
                         this.Dispose();
+                        
                     }
                 }
             }
         }
+        public static string tenKH = "";
         public static string Usertype = "";
 
         private void showMain()
@@ -112,8 +115,9 @@ namespace QuanLyHeThongNganHang
 
         private void showKhachHang()
         {
-            frmMainKhachHang guidon = new frmMainKhachHang();
-            guidon.ShowDialog();
+            frmMainKhachHang name = new frmMainKhachHang();
+            name.Sender(tenKH);
+            name.ShowDialog();
         }
 
         private void showSignUp()
@@ -155,6 +159,32 @@ namespace QuanLyHeThongNganHang
                 MessageBox.Show("Truy vấn thất bại !");
             }
             return usertype;
+        }
+        private string getName(string username, string password)
+        {
+            string name = "";
+            try
+            {
+                string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"];
+                SqlConnection con = new SqlConnection(ConnectionString);
+                SqlCommand cmd = new SqlCommand("Select * from DangNhap where username = '" + username + "' and password = '" + password + "'", con);
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt != null)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        name = dr["hoten"].ToString();
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Truy vấn thất bại !");
+            }
+            return name;
         }
     }
 }

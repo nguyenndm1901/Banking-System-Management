@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.thoátĐăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblTenKH = new System.Windows.Forms.Label();
             this.gbServices.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -100,11 +101,20 @@
             this.thoátĐăngNhậpToolStripMenuItem.Text = "Thoát đăng nhập";
             this.thoátĐăngNhậpToolStripMenuItem.Click += new System.EventHandler(this.thoátĐăngNhậpToolStripMenuItem_Click);
             // 
+            // lblTenKH
+            // 
+            this.lblTenKH.Location = new System.Drawing.Point(188, 109);
+            this.lblTenKH.Name = "lblTenKH";
+            this.lblTenKH.Size = new System.Drawing.Size(227, 20);
+            this.lblTenKH.TabIndex = 5;
+            this.lblTenKH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmMainKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(427, 327);
+            this.Controls.Add(this.lblTenKH);
             this.Controls.Add(this.gbServices);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -129,5 +139,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem thoátĐăngNhậpToolStripMenuItem;
+        private System.Windows.Forms.Label lblTenKH;
     }
 }
