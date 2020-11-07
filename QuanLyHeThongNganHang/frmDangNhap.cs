@@ -18,10 +18,13 @@ namespace QuanLyHeThongNganHang
         public frmDangNhap()
         {
             InitializeComponent();
+            txtUsername.Select();
+            txtUsername.Focus();
             btnForgot.FlatAppearance.MouseOverBackColor = btnForgot.BackColor;
             btnForgot.BackColorChanged += (s, e) => {
                 btnForgot.FlatAppearance.MouseOverBackColor = btnForgot.BackColor;
             };
+            this.AcceptButton = btnSignIn;
         }
 
         private bool isExisted()
@@ -89,6 +92,7 @@ namespace QuanLyHeThongNganHang
                     Usertype = getUserType(txtUsername.Text, txtPassword.Text);
                     if (Usertype == "Ngân Hàng")
                     {
+                        tenNV = getName(txtUsername.Text, txtPassword.Text);
                         Thread thread = new Thread(new ThreadStart(showMain));
                         thread.Start();
                         this.Dispose();
@@ -104,12 +108,14 @@ namespace QuanLyHeThongNganHang
                 }
             }
         }
+        public static string tenNV = "";
         public static string tenKH = "";
         public static string Usertype = "";
 
         private void showMain()
         {
             frmMainNganHang main = new frmMainNganHang();
+            main.Sender(tenNV);
             main.ShowDialog();
         }
 
@@ -185,6 +191,16 @@ namespace QuanLyHeThongNganHang
                 MessageBox.Show("Truy vấn thất bại !");
             }
             return name;
+        }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
         }
     }
 }

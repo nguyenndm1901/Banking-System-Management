@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangKyKhachHang));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtAdmin = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.txtUserType = new System.Windows.Forms.TextBox();
             this.labelUserType = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
@@ -41,12 +47,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.backMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSignUp = new System.Windows.Forms.Button();
-            this.txtHoTen = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.txtAdmin = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +70,59 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(275, 244);
             this.panel1.TabIndex = 11;
+            // 
+            // txtAdmin
+            // 
+            this.txtAdmin.Location = new System.Drawing.Point(198, 124);
+            this.txtAdmin.Name = "txtAdmin";
+            this.txtAdmin.ReadOnly = true;
+            this.txtAdmin.Size = new System.Drawing.Size(74, 20);
+            this.txtAdmin.TabIndex = 19;
+            this.txtAdmin.Text = "@admin.com";
+            this.txtAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(115, 124);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
+            this.txtEmail.Size = new System.Drawing.Size(89, 20);
+            this.txtEmail.TabIndex = 18;
+            // 
+            // txtHoTen
+            // 
+            this.txtHoTen.Location = new System.Drawing.Point(115, 54);
+            this.txtHoTen.MaxLength = 50;
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(157, 20);
+            this.txtHoTen.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Họ và Tên:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "ID:";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(115, 19);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(157, 20);
+            this.txtID.TabIndex = 15;
+            this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtUserType
             // 
@@ -112,18 +165,22 @@
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(115, 89);
+            this.txtUsername.MaxLength = 20;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(157, 20);
             this.txtUsername.TabIndex = 3;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
+            this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(115, 162);
+            this.txtPassword.MaxLength = 20;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(157, 20);
             this.txtPassword.TabIndex = 4;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // labelPasword
             // 
@@ -173,58 +230,6 @@
             this.btnSignUp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSignUp.UseVisualStyleBackColor = true;
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
-            // 
-            // txtHoTen
-            // 
-            this.txtHoTen.Location = new System.Drawing.Point(115, 54);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(157, 20);
-            this.txtHoTen.TabIndex = 17;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Họ và Tên:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "ID:";
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(115, 19);
-            this.txtID.Name = "txtID";
-            this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(157, 20);
-            this.txtID.TabIndex = 15;
-            this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtAdmin
-            // 
-            this.txtAdmin.Location = new System.Drawing.Point(198, 124);
-            this.txtAdmin.Name = "txtAdmin";
-            this.txtAdmin.ReadOnly = true;
-            this.txtAdmin.Size = new System.Drawing.Size(74, 20);
-            this.txtAdmin.TabIndex = 19;
-            this.txtAdmin.Text = "@admin.com";
-            this.txtAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(115, 124);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(89, 20);
-            this.txtEmail.TabIndex = 18;
             // 
             // frmDangKyKhachHang
             // 

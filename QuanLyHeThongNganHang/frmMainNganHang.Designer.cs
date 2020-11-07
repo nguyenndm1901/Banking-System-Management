@@ -35,6 +35,7 @@
             this.btnHoSoVayVon = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.thoátĐăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelTenNV = new System.Windows.Forms.Label();
             this.gbServices.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -111,17 +112,27 @@
             this.thoátĐăngNhậpToolStripMenuItem.Text = "Thoát đăng nhập";
             this.thoátĐăngNhậpToolStripMenuItem.Click += new System.EventHandler(this.thoátĐăngNhậpToolStripMenuItem_Click);
             // 
-            // frmMain
+            // labelTenNV
+            // 
+            this.labelTenNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelTenNV.Location = new System.Drawing.Point(12, 100);
+            this.labelTenNV.Name = "labelTenNV";
+            this.labelTenNV.Size = new System.Drawing.Size(403, 23);
+            this.labelTenNV.TabIndex = 3;
+            this.labelTenNV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // frmMainNganHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(427, 389);
+            this.Controls.Add(this.labelTenNV);
             this.Controls.Add(this.gbServices);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "frmMain";
+            this.Name = "frmMainNganHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bảng Điều Khiển";
             this.gbServices.ResumeLayout(false);
@@ -141,5 +152,6 @@
         private System.Windows.Forms.Button btnHoSoVayVon;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem thoátĐăngNhậpToolStripMenuItem;
+        private System.Windows.Forms.Label labelTenNV;
     }
 }

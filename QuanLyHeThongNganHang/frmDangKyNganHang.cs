@@ -200,5 +200,15 @@ namespace QuanLyHeThongNganHang
             TextBox tb = sender as TextBox;
             txtEmail.Text = tb.Text;
         }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+        }
     }
 }

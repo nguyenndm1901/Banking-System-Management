@@ -71,10 +71,12 @@
             // txtConfirm
             // 
             this.txtConfirm.Location = new System.Drawing.Point(90, 96);
+            this.txtConfirm.MaxLength = 20;
             this.txtConfirm.Name = "txtConfirm";
             this.txtConfirm.PasswordChar = '*';
             this.txtConfirm.Size = new System.Drawing.Size(197, 20);
             this.txtConfirm.TabIndex = 9;
+            this.txtConfirm.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConfirm_KeyPress);
             // 
             // label1
             // 
@@ -88,17 +90,21 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(90, 56);
+            this.txtPassword.MaxLength = 20;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(197, 20);
             this.txtPassword.TabIndex = 7;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(90, 18);
+            this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(197, 20);
             this.txtEmail.TabIndex = 5;
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             // 
             // labelPassword
             // 

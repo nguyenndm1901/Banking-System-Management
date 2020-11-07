@@ -99,10 +99,12 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(102, 101);
+            this.txtPassword.MaxLength = 20;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(129, 20);
             this.txtPassword.TabIndex = 5;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // btnSignIn
             // 

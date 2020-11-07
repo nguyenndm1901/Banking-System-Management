@@ -30,22 +30,28 @@
         {
             this.labelHSVV = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtNgayDangKy = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtKyHan = new System.Windows.Forms.TextBox();
+            this.txtTienVay = new System.Windows.Forms.TextBox();
+            this.txtTenKH = new System.Windows.Forms.TextBox();
             this.labelKyHanVay = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.labelNgayDangKy = new System.Windows.Forms.Label();
             this.labelSoTienVay = new System.Windows.Forms.Label();
             this.labelTenKH = new System.Windows.Forms.Label();
-            this.dgvVayVon = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quayVềToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgvView = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelTenNV = new System.Windows.Forms.Label();
+            this.btnDuyet = new System.Windows.Forms.Button();
+            this.btnTuChoi = new System.Windows.Forms.Button();
+            this.labelID = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVayVon)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvView)).BeginInit();
             this.SuspendLayout();
             // 
             // labelHSVV
@@ -55,94 +61,97 @@
             this.labelHSVV.Location = new System.Drawing.Point(0, 24);
             this.labelHSVV.Name = "labelHSVV";
             this.labelHSVV.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.labelHSVV.Size = new System.Drawing.Size(623, 57);
+            this.labelHSVV.Size = new System.Drawing.Size(783, 57);
             this.labelHSVV.TabIndex = 0;
             this.labelHSVV.Text = "Hồ Sơ Vay Vốn";
             this.labelHSVV.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtID);
+            this.panel1.Controls.Add(this.labelID);
+            this.panel1.Controls.Add(this.txtNgayDangKy);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtKyHan);
+            this.panel1.Controls.Add(this.txtTienVay);
+            this.panel1.Controls.Add(this.txtTenKH);
             this.panel1.Controls.Add(this.labelKyHanVay);
-            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.labelNgayDangKy);
             this.panel1.Controls.Add(this.labelSoTienVay);
             this.panel1.Controls.Add(this.labelTenKH);
             this.panel1.Location = new System.Drawing.Point(12, 84);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(599, 126);
+            this.panel1.Size = new System.Drawing.Size(759, 79);
             this.panel1.TabIndex = 1;
+            // 
+            // txtNgayDangKy
+            // 
+            this.txtNgayDangKy.Location = new System.Drawing.Point(631, 52);
+            this.txtNgayDangKy.Name = "txtNgayDangKy";
+            this.txtNgayDangKy.ReadOnly = true;
+            this.txtNgayDangKy.Size = new System.Drawing.Size(99, 20);
+            this.txtNgayDangKy.TabIndex = 9;
+            this.txtNgayDangKy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(250, 79);
+            this.label2.Location = new System.Drawing.Point(250, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Triệu VNĐ";
+            this.label2.Text = "VNĐ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(545, 79);
+            this.label1.Location = new System.Drawing.Point(477, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "Tháng";
             // 
-            // textBox3
+            // txtKyHan
             // 
-            this.textBox3.Location = new System.Drawing.Point(440, 76);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(99, 20);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtKyHan.Location = new System.Drawing.Point(372, 52);
+            this.txtKyHan.Name = "txtKyHan";
+            this.txtKyHan.ReadOnly = true;
+            this.txtKyHan.Size = new System.Drawing.Size(99, 20);
+            this.txtKyHan.TabIndex = 6;
+            this.txtKyHan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox2
+            // txtTienVay
             // 
-            this.textBox2.Location = new System.Drawing.Point(112, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 20);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTienVay.Location = new System.Drawing.Point(77, 52);
+            this.txtTienVay.Name = "txtTienVay";
+            this.txtTienVay.ReadOnly = true;
+            this.txtTienVay.Size = new System.Drawing.Size(167, 20);
+            this.txtTienVay.TabIndex = 5;
+            this.txtTienVay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox1
+            // txtTenKH
             // 
-            this.textBox1.Location = new System.Drawing.Point(112, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(201, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTenKH.Location = new System.Drawing.Point(409, 9);
+            this.txtTenKH.Name = "txtTenKH";
+            this.txtTenKH.ReadOnly = true;
+            this.txtTenKH.Size = new System.Drawing.Size(321, 20);
+            this.txtTenKH.TabIndex = 2;
+            this.txtTenKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelKyHanVay
             // 
             this.labelKyHanVay.AutoSize = true;
-            this.labelKyHanVay.Location = new System.Drawing.Point(334, 79);
+            this.labelKyHanVay.Location = new System.Drawing.Point(300, 55);
             this.labelKyHanVay.Name = "labelKyHanVay";
             this.labelKyHanVay.Size = new System.Drawing.Size(66, 13);
             this.labelKyHanVay.TabIndex = 4;
             this.labelKyHanVay.Text = "Kỳ Hạn Vay:";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(440, 27);
-            this.dateTimePicker1.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(99, 20);
-            this.dateTimePicker1.TabIndex = 3;
-            // 
             // labelNgayDangKy
             // 
             this.labelNgayDangKy.AutoSize = true;
-            this.labelNgayDangKy.Location = new System.Drawing.Point(334, 33);
+            this.labelNgayDangKy.Location = new System.Drawing.Point(546, 55);
             this.labelNgayDangKy.Name = "labelNgayDangKy";
             this.labelNgayDangKy.Size = new System.Drawing.Size(79, 13);
             this.labelNgayDangKy.TabIndex = 2;
@@ -151,7 +160,7 @@
             // labelSoTienVay
             // 
             this.labelSoTienVay.AutoSize = true;
-            this.labelSoTienVay.Location = new System.Drawing.Point(3, 79);
+            this.labelSoTienVay.Location = new System.Drawing.Point(3, 55);
             this.labelSoTienVay.Name = "labelSoTienVay";
             this.labelSoTienVay.Size = new System.Drawing.Size(68, 13);
             this.labelSoTienVay.TabIndex = 1;
@@ -160,19 +169,11 @@
             // labelTenKH
             // 
             this.labelTenKH.AutoSize = true;
-            this.labelTenKH.Location = new System.Drawing.Point(3, 33);
+            this.labelTenKH.Location = new System.Drawing.Point(300, 12);
             this.labelTenKH.Name = "labelTenKH";
             this.labelTenKH.Size = new System.Drawing.Size(92, 13);
             this.labelTenKH.TabIndex = 0;
             this.labelTenKH.Text = "Tên Khách Hàng:";
-            // 
-            // dgvVayVon
-            // 
-            this.dgvVayVon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVayVon.Location = new System.Drawing.Point(12, 216);
-            this.dgvVayVon.Name = "dgvVayVon";
-            this.dgvVayVon.Size = new System.Drawing.Size(599, 260);
-            this.dgvVayVon.TabIndex = 2;
             // 
             // menuStrip1
             // 
@@ -180,7 +181,7 @@
             this.quayVềToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(623, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(783, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -191,12 +192,83 @@
             this.quayVềToolStripMenuItem.Text = "Quay Về";
             this.quayVềToolStripMenuItem.Click += new System.EventHandler(this.quayVềToolStripMenuItem_Click);
             // 
+            // dgvView
+            // 
+            this.dgvView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvView.Location = new System.Drawing.Point(12, 216);
+            this.dgvView.Name = "dgvView";
+            this.dgvView.Size = new System.Drawing.Size(759, 260);
+            this.dgvView.TabIndex = 10;
+            this.dgvView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvView_CellClick);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 188);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Nhân Viên:";
+            // 
+            // labelTenNV
+            // 
+            this.labelTenNV.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelTenNV.Location = new System.Drawing.Point(78, 185);
+            this.labelTenNV.Name = "labelTenNV";
+            this.labelTenNV.Size = new System.Drawing.Size(300, 19);
+            this.labelTenNV.TabIndex = 12;
+            this.labelTenNV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnDuyet
+            // 
+            this.btnDuyet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDuyet.Location = new System.Drawing.Point(522, 169);
+            this.btnDuyet.Name = "btnDuyet";
+            this.btnDuyet.Size = new System.Drawing.Size(88, 41);
+            this.btnDuyet.TabIndex = 13;
+            this.btnDuyet.Text = "Duyệt";
+            this.btnDuyet.UseVisualStyleBackColor = true;
+            this.btnDuyet.Click += new System.EventHandler(this.btnDuyet_Click);
+            // 
+            // btnTuChoi
+            // 
+            this.btnTuChoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTuChoi.Location = new System.Drawing.Point(680, 169);
+            this.btnTuChoi.Name = "btnTuChoi";
+            this.btnTuChoi.Size = new System.Drawing.Size(88, 41);
+            this.btnTuChoi.TabIndex = 14;
+            this.btnTuChoi.Text = "Từ Chối";
+            this.btnTuChoi.UseVisualStyleBackColor = true;
+            this.btnTuChoi.Click += new System.EventHandler(this.btnTuChoi_Click);
+            // 
+            // labelID
+            // 
+            this.labelID.AutoSize = true;
+            this.labelID.Location = new System.Drawing.Point(3, 12);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(58, 13);
+            this.labelID.TabIndex = 10;
+            this.labelID.Text = "Mã Hồ Sơ:";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(77, 6);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(167, 20);
+            this.txtID.TabIndex = 11;
+            this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // frmHoSoVayVon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 488);
-            this.Controls.Add(this.dgvVayVon);
+            this.ClientSize = new System.Drawing.Size(783, 488);
+            this.Controls.Add(this.btnTuChoi);
+            this.Controls.Add(this.btnDuyet);
+            this.Controls.Add(this.labelTenNV);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dgvView);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelHSVV);
             this.Controls.Add(this.menuStrip1);
@@ -205,11 +277,12 @@
             this.Name = "frmHoSoVayVon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hồ Sơ Vay Vốn";
+            this.Load += new System.EventHandler(this.frmHoSoVayVon_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVayVon)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,15 +295,21 @@
         private System.Windows.Forms.Label labelTenKH;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtKyHan;
+        private System.Windows.Forms.TextBox txtTienVay;
+        private System.Windows.Forms.TextBox txtTenKH;
         private System.Windows.Forms.Label labelKyHanVay;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label labelNgayDangKy;
         private System.Windows.Forms.Label labelSoTienVay;
-        private System.Windows.Forms.DataGridView dgvVayVon;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem quayVềToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtNgayDangKy;
+        private System.Windows.Forms.DataGridView dgvView;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelTenNV;
+        private System.Windows.Forms.Button btnDuyet;
+        private System.Windows.Forms.Button btnTuChoi;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label labelID;
     }
 }

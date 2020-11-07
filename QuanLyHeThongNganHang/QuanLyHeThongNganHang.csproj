@@ -119,6 +119,9 @@
     <Compile Include="frmQuenMatKhau.Designer.cs">
       <DependentUpon>frmQuenMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoSo_BUS.cs" />
+    <Compile Include="HoSo_DAL.cs" />
+    <Compile Include="HoSo_DTO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmQuanLyTaiSanTheChap.cs">

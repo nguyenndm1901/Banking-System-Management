@@ -75,17 +75,21 @@
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(115, 32);
+            this.txtUsername.MaxLength = 20;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(157, 20);
             this.txtUsername.TabIndex = 3;
+            this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(115, 79);
+            this.txtPassword.MaxLength = 20;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(157, 20);
             this.txtPassword.TabIndex = 4;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // panel1
             // 
@@ -129,7 +133,6 @@
             // 
             // btnSignIn
             // 
-            this.btnSignIn.Image = global::QuanLyHeThongNganHang.Properties.Resources.rsz_enter;
             this.btnSignIn.ImageKey = "(none)";
             this.btnSignIn.Location = new System.Drawing.Point(12, 300);
             this.btnSignIn.Name = "btnSignIn";

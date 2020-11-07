@@ -30,6 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblTenKH = new System.Windows.Forms.Label();
             this.labelThang = new System.Windows.Forms.Label();
             this.labelDonVi = new System.Windows.Forms.Label();
             this.dateDangKy = new System.Windows.Forms.DateTimePicker();
@@ -42,9 +45,8 @@
             this.btnSend = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quayVềToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblTenKH = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelConvert = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +65,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.labelConvert);
             this.panel1.Controls.Add(this.txtID);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lblTenKH);
@@ -80,10 +84,40 @@
             this.panel1.Size = new System.Drawing.Size(328, 219);
             this.panel1.TabIndex = 1;
             // 
+            // txtID
+            // 
+            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtID.Location = new System.Drawing.Point(98, 23);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(224, 13);
+            this.txtID.TabIndex = 11;
+            this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Mã hồ sơ:";
+            // 
+            // lblTenKH
+            // 
+            this.lblTenKH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTenKH.Location = new System.Drawing.Point(95, 54);
+            this.lblTenKH.Name = "lblTenKH";
+            this.lblTenKH.Size = new System.Drawing.Size(227, 20);
+            this.lblTenKH.TabIndex = 9;
+            this.lblTenKH.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // labelThang
             // 
             this.labelThang.AutoSize = true;
-            this.labelThang.Location = new System.Drawing.Point(284, 115);
+            this.labelThang.Location = new System.Drawing.Point(284, 144);
             this.labelThang.Name = "labelThang";
             this.labelThang.Size = new System.Drawing.Size(38, 13);
             this.labelThang.TabIndex = 8;
@@ -102,7 +136,7 @@
             // dateDangKy
             // 
             this.dateDangKy.Enabled = false;
-            this.dateDangKy.Location = new System.Drawing.Point(98, 145);
+            this.dateDangKy.Location = new System.Drawing.Point(98, 174);
             this.dateDangKy.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
             this.dateDangKy.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dateDangKy.Name = "dateDangKy";
@@ -112,7 +146,7 @@
             // 
             // txtKyHan
             // 
-            this.txtKyHan.Location = new System.Drawing.Point(98, 112);
+            this.txtKyHan.Location = new System.Drawing.Point(98, 141);
             this.txtKyHan.Name = "txtKyHan";
             this.txtKyHan.Size = new System.Drawing.Size(180, 20);
             this.txtKyHan.TabIndex = 5;
@@ -121,15 +155,18 @@
             // txtSoTien
             // 
             this.txtSoTien.Location = new System.Drawing.Point(98, 80);
+            this.txtSoTien.MaxLength = 19;
             this.txtSoTien.Name = "txtSoTien";
             this.txtSoTien.Size = new System.Drawing.Size(180, 20);
             this.txtSoTien.TabIndex = 4;
             this.txtSoTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSoTien.TextChanged += new System.EventHandler(this.txtSoTien_TextChanged);
+            this.txtSoTien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoTien_KeyPress);
             // 
             // labelNgayVay
             // 
             this.labelNgayVay.AutoSize = true;
-            this.labelNgayVay.Location = new System.Drawing.Point(3, 151);
+            this.labelNgayVay.Location = new System.Drawing.Point(3, 180);
             this.labelNgayVay.Name = "labelNgayVay";
             this.labelNgayVay.Size = new System.Drawing.Size(97, 13);
             this.labelNgayVay.TabIndex = 3;
@@ -138,7 +175,7 @@
             // labelKyHan
             // 
             this.labelKyHan.AutoSize = true;
-            this.labelKyHan.Location = new System.Drawing.Point(3, 115);
+            this.labelKyHan.Location = new System.Drawing.Point(3, 144);
             this.labelKyHan.Name = "labelKyHan";
             this.labelKyHan.Size = new System.Drawing.Size(92, 13);
             this.labelKyHan.TabIndex = 2;
@@ -190,35 +227,23 @@
             this.quayVềToolStripMenuItem.Text = "Quay về";
             this.quayVềToolStripMenuItem.Click += new System.EventHandler(this.quayVềToolStripMenuItem_Click);
             // 
-            // lblTenKH
+            // labelConvert
             // 
-            this.lblTenKH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTenKH.Location = new System.Drawing.Point(95, 54);
-            this.lblTenKH.Name = "lblTenKH";
-            this.lblTenKH.Size = new System.Drawing.Size(227, 20);
-            this.lblTenKH.TabIndex = 9;
-            this.lblTenKH.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelConvert.Location = new System.Drawing.Point(95, 103);
+            this.labelConvert.Name = "labelConvert";
+            this.labelConvert.Size = new System.Drawing.Size(183, 23);
+            this.labelConvert.TabIndex = 12;
+            this.labelConvert.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtID
+            // label3
             // 
-            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtID.Location = new System.Drawing.Point(98, 23);
-            this.txtID.Name = "txtID";
-            this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(224, 13);
-            this.txtID.TabIndex = 11;
-            this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Mã hồ sơ:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "(tối đa 19 ký tự)";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmGuiHoSoVayVon
             // 
@@ -262,5 +287,7 @@
         private System.Windows.Forms.Label lblTenKH;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelConvert;
+        private System.Windows.Forms.Label label3;
     }
 }

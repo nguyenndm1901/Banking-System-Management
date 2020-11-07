@@ -103,11 +103,12 @@
             // 
             // lblTenKH
             // 
-            this.lblTenKH.Location = new System.Drawing.Point(188, 109);
+            this.lblTenKH.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblTenKH.Location = new System.Drawing.Point(12, 109);
             this.lblTenKH.Name = "lblTenKH";
-            this.lblTenKH.Size = new System.Drawing.Size(227, 20);
+            this.lblTenKH.Size = new System.Drawing.Size(403, 20);
             this.lblTenKH.TabIndex = 5;
-            this.lblTenKH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTenKH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmMainKhachHang
             // 

@@ -90,5 +90,10 @@ namespace QuanLyHeThongNganHang
             thread.Start();
             this.Dispose();
         }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+        }
     }
 }

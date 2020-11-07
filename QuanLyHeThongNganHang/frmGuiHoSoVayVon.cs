@@ -42,11 +42,35 @@ namespace QuanLyHeThongNganHang
                 txtSoTien.Focus();
                 return false;
             }
+            else
+            {
+                int tempSoLuong;
+                bool isNumberic = int.TryParse(txtSoTien.Text.Trim(), out tempSoLuong);
+                if (!isNumberic)
+                {
+                    MessageBox.Show("Số tiền phải là số nguyên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtSoTien.Clear();
+                    txtSoTien.Focus();
+                    return false;
+                }
+            }
             if (txtKyHan.Text.Trim() == string.Empty)
             {
                 MessageBox.Show("Yêu cầu kỳ hạn vay.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtKyHan.Focus();
                 return false;
+            }
+            else
+            {
+                int tempSoLuong;
+                bool isNumberic = int.TryParse(txtKyHan.Text.Trim(), out tempSoLuong);
+                if (!isNumberic)
+                {
+                    MessageBox.Show("Kỳ hạn phải là số nguyên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtKyHan.Clear();
+                    txtKyHan.Focus();
+                    return false;
+                }
             }
             return true;
         }
@@ -152,6 +176,19 @@ namespace QuanLyHeThongNganHang
             Thread thread = new Thread(new ThreadStart(showKhachHang));
             thread.Start();
             this.Dispose();
+        }
+
+        private void txtSoTien_TextChanged(object sender, EventArgs e)
+        {
+            long a;
+            long.TryParse(txtSoTien.Text.Trim(), out a);
+            TextBox tb = sender as TextBox;
+            labelConvert.Text = string.Format("{0:n0}", a);
+        }
+
+        private void txtSoTien_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
         }
     }
 }

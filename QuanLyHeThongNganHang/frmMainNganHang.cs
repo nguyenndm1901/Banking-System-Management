@@ -13,19 +13,32 @@ namespace QuanLyHeThongNganHang
 {
     public partial class frmMainNganHang : Form
     {
+        public delegate void sendName(string tenNV);
+        public sendName Sender;
+
         public frmMainNganHang()
         {
             InitializeComponent();
+            Sender = new sendName(getName);
+        }
+
+        private void getName(string tenNV)
+        {
+            labelTenNV.Text = tenNV;
         }
 
         private void showHSVV()
         {
             frmHoSoVayVon hsvv = new frmHoSoVayVon();
+            hsvv.Sender(tennv);
             hsvv.ShowDialog();
         }
 
+        public static string tennv = "";
+
         private void btnHoSoVayVon_Click(object sender, EventArgs e)
         {
+            tennv = labelTenNV.Text;
             Thread thread = new Thread(new ThreadStart(showHSVV));
             thread.Start();
             this.Dispose();
