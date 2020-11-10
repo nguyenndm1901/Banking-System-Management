@@ -177,8 +177,6 @@ namespace QuanLyHeThongNganHang
             }
         }
 
-        private List<HoSo_DTO> HoSo = new List<HoSo_DTO>();
-
         private void btnDuyet_Click(object sender, EventArgs e)
         {
             LuuThongTinDuyet((int)Save.save);

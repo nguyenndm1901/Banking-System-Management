@@ -145,6 +145,9 @@
     <EmbeddedResource Include="frmGuiHoSoVayVon.resx">
       <DependentUpon>frmGuiHoSoVayVon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmHopDong.resx">
+      <DependentUpon>frmHopDong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHoSoVayVon.resx">
       <DependentUpon>frmHoSoVayVon.cs</DependentUpon>
     </EmbeddedResource>

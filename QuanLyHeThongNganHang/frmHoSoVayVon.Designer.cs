@@ -30,6 +30,8 @@
         {
             this.labelHSVV = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.labelID = new System.Windows.Forms.Label();
             this.txtNgayDangKy = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@
             this.labelTenNV = new System.Windows.Forms.Label();
             this.btnDuyet = new System.Windows.Forms.Button();
             this.btnTuChoi = new System.Windows.Forms.Button();
-            this.labelID = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvView)).BeginInit();
@@ -84,6 +84,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(759, 79);
             this.panel1.TabIndex = 1;
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(77, 6);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(167, 20);
+            this.txtID.TabIndex = 11;
+            this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelID
+            // 
+            this.labelID.AutoSize = true;
+            this.labelID.Location = new System.Drawing.Point(3, 12);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(58, 13);
+            this.labelID.TabIndex = 10;
+            this.labelID.Text = "Mã Hồ Sơ:";
             // 
             // txtNgayDangKy
             // 
@@ -240,24 +258,6 @@
             this.btnTuChoi.Text = "Từ Chối";
             this.btnTuChoi.UseVisualStyleBackColor = true;
             this.btnTuChoi.Click += new System.EventHandler(this.btnTuChoi_Click);
-            // 
-            // labelID
-            // 
-            this.labelID.AutoSize = true;
-            this.labelID.Location = new System.Drawing.Point(3, 12);
-            this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(58, 13);
-            this.labelID.TabIndex = 10;
-            this.labelID.Text = "Mã Hồ Sơ:";
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(77, 6);
-            this.txtID.Name = "txtID";
-            this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(167, 20);
-            this.txtID.TabIndex = 11;
-            this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmHoSoVayVon
             // 
