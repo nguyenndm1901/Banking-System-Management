@@ -34,7 +34,7 @@ namespace QuanLyHeThongNganHang
 
         private void quayVềToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread(new ThreadStart(Main);
+            Thread thread = new Thread(new ThreadStart(Main));
             thread.Start();
             this.Dispose();
         }
