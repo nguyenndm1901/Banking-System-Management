@@ -26,7 +26,7 @@ namespace QuanLyHeThongNganHang
 
         private void getName(string tenKH)
         {
-            txtHoTen.Text = tenKH;
+            labelTenKH.Text = tenKH;
         }
 
         private void frmGiaHanNo_Load(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace QuanLyHeThongNganHang
                 using (SqlCommand cmd = new SqlCommand("SELECT id FROM HoSoVayVon WHERE tenKH=@tenKH", cnn))
                 {
                     cnn.Open();
-                    cmd.Parameters.AddWithValue("@tenKH", txtHoTen.Text.Trim());
+                    cmd.Parameters.AddWithValue("@tenKH", labelTenKH.Text.Trim());
                     SqlDataReader reader = cmd.ExecuteReader();
                     dtHSVV.Load(reader);
                 }
@@ -200,7 +200,7 @@ namespace QuanLyHeThongNganHang
                     using (SqlCommand cmd = new SqlCommand("INSERT INTO [GiaHanVayVon](id,tenKH,maHoSo,lyDo,kyHanCu,kyHanMoi,ngayDangKy) VALUES (@id,@tenKH,@maHoSo,@lyDo,@kyHanCu,@kyHanMoi,@ngayDangKy)", cnn))
                     {
                         cmd.Parameters.AddWithValue("@id", txtIDGiaHan.Text.Trim());
-                        cmd.Parameters.AddWithValue("@tenKH", txtHoTen.Text.Trim());
+                        cmd.Parameters.AddWithValue("@tenKH", labelTenKH.Text.Trim());
                         cmd.Parameters.AddWithValue("@maHoSo", cbID.SelectedValue.ToString());
                         cmd.Parameters.AddWithValue("@lyDo", txtLyDo.Text.Trim());
                         cmd.Parameters.AddWithValue("@kyHanCu", txtKyHanCu.Text.Trim());

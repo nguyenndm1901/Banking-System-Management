@@ -30,6 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelConvert = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTenKH = new System.Windows.Forms.Label();
@@ -45,8 +47,6 @@
             this.btnSend = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quayVềToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.labelConvert = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +83,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(328, 219);
             this.panel1.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "(tối đa 19 ký tự)";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // labelConvert
+            // 
+            this.labelConvert.Location = new System.Drawing.Point(95, 103);
+            this.labelConvert.Name = "labelConvert";
+            this.labelConvert.Size = new System.Drawing.Size(183, 23);
+            this.labelConvert.TabIndex = 12;
+            this.labelConvert.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtID
             // 
@@ -135,6 +153,7 @@
             // 
             // dateDangKy
             // 
+            this.dateDangKy.Checked = false;
             this.dateDangKy.Enabled = false;
             this.dateDangKy.Location = new System.Drawing.Point(98, 174);
             this.dateDangKy.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
@@ -142,7 +161,7 @@
             this.dateDangKy.Name = "dateDangKy";
             this.dateDangKy.Size = new System.Drawing.Size(227, 20);
             this.dateDangKy.TabIndex = 6;
-            this.dateDangKy.Value = new System.DateTime(2020, 11, 6, 2, 31, 37, 0);
+            this.dateDangKy.Value = new System.DateTime(2020, 12, 9, 0, 0, 0, 0);
             // 
             // txtKyHan
             // 
@@ -226,24 +245,6 @@
             this.quayVềToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.quayVềToolStripMenuItem.Text = "Quay về";
             this.quayVềToolStripMenuItem.Click += new System.EventHandler(this.quayVềToolStripMenuItem_Click);
-            // 
-            // labelConvert
-            // 
-            this.labelConvert.Location = new System.Drawing.Point(95, 103);
-            this.labelConvert.Name = "labelConvert";
-            this.labelConvert.Size = new System.Drawing.Size(183, 23);
-            this.labelConvert.TabIndex = 12;
-            this.labelConvert.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 108);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "(tối đa 19 ký tự)";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmGuiHoSoVayVon
             // 

@@ -152,6 +152,10 @@ namespace QuanLyHeThongNganHang
             }
             txtSoTien.Select();
             txtSoTien.Focus();
+
+            DateTimePicker dt = new DateTimePicker();
+            dt.Value = DateTime.Today;
+            this.Controls.Add(dt);
         }
 
         private void btnSend_Click(object sender, EventArgs e)

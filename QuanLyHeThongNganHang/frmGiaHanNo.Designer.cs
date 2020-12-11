@@ -32,6 +32,7 @@
             this.quayVềToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtKyHanCu = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.txtKyHanMoi = new System.Windows.Forms.TextBox();
             this.txtLyDo = new System.Windows.Forms.TextBox();
             this.txtNgayTao = new System.Windows.Forms.TextBox();
-            this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDangKy = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
+            this.labelTenKH = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +85,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.labelTenKH);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.txtKyHanCu);
@@ -97,7 +98,6 @@
             this.panel1.Controls.Add(this.txtKyHanMoi);
             this.panel1.Controls.Add(this.txtLyDo);
             this.panel1.Controls.Add(this.txtNgayTao);
-            this.panel1.Controls.Add(this.txtHoTen);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
@@ -108,6 +108,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(306, 331);
             this.panel1.TabIndex = 2;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(3, 184);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 13);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "(200 ký tự):";
             // 
             // label11
             // 
@@ -207,16 +216,6 @@
             this.txtNgayTao.TabIndex = 8;
             this.txtNgayTao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtHoTen
-            // 
-            this.txtHoTen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtHoTen.Location = new System.Drawing.Point(98, 38);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.ReadOnly = true;
-            this.txtHoTen.Size = new System.Drawing.Size(205, 13);
-            this.txtHoTen.TabIndex = 6;
-            this.txtHoTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -282,14 +281,14 @@
             this.btnDangKy.UseVisualStyleBackColor = true;
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
-            // label12
+            // labelTenKH
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 184);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 13);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "(200 ký tự):";
+            this.labelTenKH.Location = new System.Drawing.Point(98, 36);
+            this.labelTenKH.Name = "labelTenKH";
+            this.labelTenKH.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelTenKH.Size = new System.Drawing.Size(204, 23);
+            this.labelTenKH.TabIndex = 20;
+            this.labelTenKH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmGiaHanNo
             // 
@@ -327,7 +326,6 @@
         private System.Windows.Forms.TextBox txtKyHanMoi;
         private System.Windows.Forms.TextBox txtLyDo;
         private System.Windows.Forms.TextBox txtNgayTao;
-        private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -341,5 +339,6 @@
         private System.Windows.Forms.TextBox txtKyHanCu;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label labelTenKH;
     }
 }
