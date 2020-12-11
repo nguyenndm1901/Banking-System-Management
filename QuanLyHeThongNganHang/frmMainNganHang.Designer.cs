@@ -61,7 +61,7 @@
             this.gbServices.Controls.Add(this.btnHoSoVayVon);
             this.gbServices.Location = new System.Drawing.Point(12, 126);
             this.gbServices.Name = "gbServices";
-            this.gbServices.Size = new System.Drawing.Size(403, 343);
+            this.gbServices.Size = new System.Drawing.Size(403, 332);
             this.gbServices.TabIndex = 1;
             this.gbServices.TabStop = false;
             this.gbServices.Text = "Dịch vụ:";
@@ -139,6 +139,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(427, 481);
+            this.ControlBox = false;
             this.Controls.Add(this.labelTenNV);
             this.Controls.Add(this.gbServices);
             this.Controls.Add(this.label1);
