@@ -56,5 +56,20 @@ namespace QuanLyHeThongNganHang
             thread.Start();
             this.Dispose();
         }
+
+        private void showGHVV()
+        {
+            frmDuyetGiaHan ghvv = new frmDuyetGiaHan();
+            ghvv.Sender(tennv);
+            ghvv.ShowDialog();
+        }
+
+        private void btnDuyetGiaHan_Click(object sender, EventArgs e)
+        {
+            tennv = labelTenNV.Text;
+            Thread thread = new Thread(new ThreadStart(showGHVV));
+            thread.Start();
+            this.Dispose();
+        }
     }
 }

@@ -197,7 +197,7 @@ namespace QuanLyHeThongNganHang
                 using (SqlConnection cnn = new SqlConnection(ConnectionString))
                 {
                     cnn.Open();
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO [GiaHanVayVon](id,tenKH,maHoSo,lyDo,kyHanCu,kyHanMoi,ngayDangKy) VALUES (@id,@tenKH,@maHoSo,@lyDo,@kyHanCu,@kyHanMoi,@ngayDangKy)", cnn))
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO [GiaHanVayVon](id,tenKH,maHoSo,lyDo,kyHanCu,kyHanMoi,ngayDangKy,nhanVienDuyet,tinhTrang) VALUES (@id,@tenKH,@maHoSo,@lyDo,@kyHanCu,@kyHanMoi,@ngayDangKy,@nhanVienDuyet,@tinhTrang)", cnn))
                     {
                         cmd.Parameters.AddWithValue("@id", txtIDGiaHan.Text.Trim());
                         cmd.Parameters.AddWithValue("@tenKH", labelTenKH.Text.Trim());
@@ -206,6 +206,8 @@ namespace QuanLyHeThongNganHang
                         cmd.Parameters.AddWithValue("@kyHanCu", txtKyHanCu.Text.Trim());
                         cmd.Parameters.AddWithValue("@kyHanMoi", txtKyHanMoi.Text.Trim());
                         cmd.Parameters.AddWithValue("@ngayDangKy", dateDangKy.Value.ToString("yyyy - MM - dd"));
+                        cmd.Parameters.AddWithValue("@nhanVienDuyet", "Chưa xác định");
+                        cmd.Parameters.AddWithValue("@tinhTrang", "Đang chờ");
                         cmd.ExecuteNonQuery();
                     }
                 }
