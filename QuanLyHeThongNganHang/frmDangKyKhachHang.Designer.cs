@@ -78,7 +78,7 @@
             this.txtAdmin.ReadOnly = true;
             this.txtAdmin.Size = new System.Drawing.Size(74, 20);
             this.txtAdmin.TabIndex = 19;
-            this.txtAdmin.Text = "client@client.com";
+            this.txtAdmin.Text = "@client.com";
             this.txtAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtEmail
