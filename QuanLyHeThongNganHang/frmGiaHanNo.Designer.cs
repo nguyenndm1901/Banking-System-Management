@@ -52,6 +52,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDangKy = new System.Windows.Forms.Button();
+            this.labelMaHoSo = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +87,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.labelMaHoSo);
             this.panel1.Controls.Add(this.labelTenKH);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
@@ -189,7 +191,7 @@
             this.cbID.FormattingEnabled = true;
             this.cbID.Location = new System.Drawing.Point(98, 67);
             this.cbID.Name = "cbID";
-            this.cbID.Size = new System.Drawing.Size(205, 21);
+            this.cbID.Size = new System.Drawing.Size(102, 21);
             this.cbID.TabIndex = 12;
             // 
             // dateDangKy
@@ -291,6 +293,14 @@
             this.btnDangKy.UseVisualStyleBackColor = true;
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
+            // labelMaHoSo
+            // 
+            this.labelMaHoSo.Location = new System.Drawing.Point(206, 67);
+            this.labelMaHoSo.Name = "labelMaHoSo";
+            this.labelMaHoSo.Size = new System.Drawing.Size(96, 21);
+            this.labelMaHoSo.TabIndex = 21;
+            this.labelMaHoSo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmGiaHanNo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,5 +351,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label labelTenKH;
+        private System.Windows.Forms.Label labelMaHoSo;
     }
 }

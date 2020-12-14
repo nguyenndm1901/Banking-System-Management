@@ -75,6 +75,7 @@ namespace QuanLyHeThongNganHang
                 txtNgayTao.Text = ngayTao.ToString();
                 string kyHan = GetKyHan(id);
                 txtKyHanCu.Text = kyHan.ToString();
+                labelMaHoSo.Text = cbID.SelectedValue.ToString();
             }
         }
 
@@ -115,7 +116,7 @@ namespace QuanLyHeThongNganHang
                 using (SqlCommand cmd = new SqlCommand("SELECT maHoSo FROM GiaHanVayVon WHERE [maHoSo] = @maHoSo", cnn))
                 {
                     cnn.Open();
-                    cmd.Parameters.AddWithValue("@maHoSo", cbID.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@maHoSo", maHoSo);
                     DataTable dtAnyData = new DataTable();
                     SqlDataReader reader = cmd.ExecuteReader();
                     dtAnyData.Load(reader);
@@ -172,12 +173,12 @@ namespace QuanLyHeThongNganHang
         {
             if (IsValidated())
             {
-                string id = Convert.ToString(cbID.SelectedValue);
-                if (!checkExisted(id))
+                string maHoSo = labelMaHoSo.Text;
+                if (checkExisted(maHoSo))
                 {
                     MessageBox.Show("Mã hồ sơ đã đăng ký gia hạn trước đó", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
+                else if (!checkExisted(maHoSo))
                 {
                     LuuThongTin((int)Save.save);
                     tenKH = labelTenKH.Text;

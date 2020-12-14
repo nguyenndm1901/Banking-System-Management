@@ -31,7 +31,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.thoátĐăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,8 +47,8 @@
             // thoátĐăngNhậpToolStripMenuItem
             // 
             this.thoátĐăngNhậpToolStripMenuItem.Name = "thoátĐăngNhậpToolStripMenuItem";
-            this.thoátĐăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
-            this.thoátĐăngNhậpToolStripMenuItem.Text = "Thoát đăng nhập";
+            this.thoátĐăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.thoátĐăngNhậpToolStripMenuItem.Text = "Trở về";
             // 
             // label1
             // 
@@ -63,20 +62,11 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Hợp Đồng";
             // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(330, 72);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(332, 254);
-            this.panel1.TabIndex = 2;
-            // 
             // frmHopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(674, 383);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -96,7 +86,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem thoátĐăngNhậpToolStripMenuItem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
     }
 }
 
