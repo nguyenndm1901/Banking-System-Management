@@ -41,7 +41,6 @@ namespace QuanLyHeThongNganHang
             this.label9 = new System.Windows.Forms.Label();
             this.labelMaHoSo = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.labelMaDon = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.labelTenKH = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,6 +51,7 @@ namespace QuanLyHeThongNganHang
             this.label5 = new System.Windows.Forms.Label();
             this.brnReject = new System.Windows.Forms.Button();
             this.btnAccept = new System.Windows.Forms.Button();
+            this.txtMaDon = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDuyet)).BeginInit();
@@ -88,6 +88,7 @@ namespace QuanLyHeThongNganHang
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtMaDon);
             this.groupBox1.Controls.Add(this.labelNgayDK);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.labelKyHanMoi);
@@ -98,7 +99,6 @@ namespace QuanLyHeThongNganHang
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.labelMaHoSo);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.labelMaDon);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.labelTenKH);
             this.groupBox1.Controls.Add(this.label3);
@@ -179,14 +179,6 @@ namespace QuanLyHeThongNganHang
             this.label8.TabIndex = 6;
             this.label8.Text = "Mã Hồ Sơ:";
             // 
-            // labelMaDon
-            // 
-            this.labelMaDon.Location = new System.Drawing.Point(490, 12);
-            this.labelMaDon.Name = "labelMaDon";
-            this.labelMaDon.Size = new System.Drawing.Size(121, 20);
-            this.labelMaDon.TabIndex = 5;
-            this.labelMaDon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -237,6 +229,7 @@ namespace QuanLyHeThongNganHang
             this.dgvDuyet.Name = "dgvDuyet";
             this.dgvDuyet.Size = new System.Drawing.Size(647, 200);
             this.dgvDuyet.TabIndex = 3;
+            this.dgvDuyet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDuyet_CellClick);
             // 
             // labelNgayDK
             // 
@@ -277,6 +270,14 @@ namespace QuanLyHeThongNganHang
             this.btnAccept.UseVisualStyleBackColor = true;
             this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
+            // txtMaDon
+            // 
+            this.txtMaDon.Enabled = false;
+            this.txtMaDon.Location = new System.Drawing.Point(511, 13);
+            this.txtMaDon.Name = "txtMaDon";
+            this.txtMaDon.Size = new System.Drawing.Size(100, 20);
+            this.txtMaDon.TabIndex = 16;
+            // 
             // frmDuyetGiaHan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,7 +313,6 @@ namespace QuanLyHeThongNganHang
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelTenNV;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labelMaDon;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelTenKH;
         private System.Windows.Forms.Label labelLyDo;
@@ -328,5 +328,6 @@ namespace QuanLyHeThongNganHang
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button brnReject;
         private System.Windows.Forms.Button btnAccept;
+        private System.Windows.Forms.TextBox txtMaDon;
     }
 }

@@ -132,7 +132,7 @@ namespace QuanLyHeThongNganHang
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dgvDuyet.Rows[e.RowIndex];
-                labelMaDon.Text = row.Cells[0].Value.ToString();
+                txtMaDon.Text = row.Cells[0].Value.ToString();
                 labelTenKH.Text = row.Cells[1].Value.ToString();
                 labelMaHoSo.Text = row.Cells[2].Value.ToString();
                 labelLyDo.Text = row.Cells[3].Value.ToString();
@@ -155,11 +155,11 @@ namespace QuanLyHeThongNganHang
                 using (SqlConnection cnn = new SqlConnection(ConnectionString))
                 {
                     cnn.Open();
-                    using (SqlCommand cmd = new SqlCommand("UPDATE [GiaHanVayVon] SET kyHanCu = @kyHanCu, kyHanMoi = '0' nhanVienDuyet = @nhanVienDuyet, tinhTrang = 'Accepted' WHERE id = @id", cnn))
+                    using (SqlCommand cmd = new SqlCommand("UPDATE [GiaHanVayVon] SET kyHanCu = @kyHanCu, kyHanMoi = '0', nhanVienDuyet = @nhanVienDuyet, tinhTrang = 'Accepted' WHERE id = @id", cnn))
                     {
                         cmd.Parameters.AddWithValue("@kyHanCu", labelKyHanMoi.Text);
                         cmd.Parameters.AddWithValue("@nhanVienDuyet", labelTenNV.Text);
-                        cmd.Parameters.AddWithValue("@id", labelMaDon.Text);
+                        cmd.Parameters.AddWithValue("@id", txtMaDon.Text);
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -169,7 +169,7 @@ namespace QuanLyHeThongNganHang
                     using (SqlCommand cmd = new SqlCommand("UPDATE [HoSoVayVon] SET kyHan = @kyHan WHERE id = @id", cnn))
                     {
                         cmd.Parameters.AddWithValue("@kyHan", labelKyHanMoi.Text);
-                        cmd.Parameters.AddWithValue("@id", labelMaDon.Text);
+                        cmd.Parameters.AddWithValue("@id", labelMaHoSo.Text);
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -189,11 +189,11 @@ namespace QuanLyHeThongNganHang
                 using (SqlConnection cnn = new SqlConnection(ConnectionString))
                 {
                     cnn.Open();
-                    using (SqlCommand cmd = new SqlCommand("UPDATE [HoSoVayVon] SET kyHanCu = @kyHanCu, kyHanMoi = '0', nhanVienDuyet = @nhanVienDuyet, tinhTrang = 'Rejected' WHERE id = @id", cnn))
+                    using (SqlCommand cmd = new SqlCommand("UPDATE [GiaHanVayVon] SET kyHanCu = @kyHanCu, kyHanMoi = '0', nhanVienDuyet = @nhanVienDuyet, tinhTrang = 'Rejected' WHERE id = @id", cnn))
                     {
                         cmd.Parameters.AddWithValue("@kyHanCu", labelKyHanCu.Text);
                         cmd.Parameters.AddWithValue("@nhanVienDuyet", labelTenNV.Text);
-                        cmd.Parameters.AddWithValue("@id", labelMaDon.Text);
+                        cmd.Parameters.AddWithValue("@id", txtMaDon.Text);
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -214,7 +214,7 @@ namespace QuanLyHeThongNganHang
             else
             {
                 LuuThongTinDuyet((int)Save.save);
-                labelMaDon.Text = "";
+                txtMaDon.Text = "";
                 labelTenKH.Text = "";
                 labelMaHoSo.Text = "";
                 labelLyDo.Text = "";
@@ -234,7 +234,7 @@ namespace QuanLyHeThongNganHang
             else
             {
                 LuuThongTinTuChoi((int)Save.save);
-                labelMaDon.Text = "";
+                txtMaDon.Text = "";
                 labelTenKH.Text = "";
                 labelMaHoSo.Text = "";
                 labelLyDo.Text = "";
