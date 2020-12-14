@@ -90,7 +90,7 @@ namespace QuanLyHeThongNganHang
                 else
                 {
                     Usertype = getUserType(txtUsername.Text, txtPassword.Text);
-                    if (Usertype == "Ngân Hàng")
+                    if ((Usertype == "Ngân Hàng") || (Usertype == "master"))
                     {
                         tenNV = getName(txtUsername.Text, txtPassword.Text);
                         Thread thread = new Thread(new ThreadStart(showMain));
