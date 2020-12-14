@@ -106,6 +106,28 @@ namespace QuanLyHeThongNganHang
             }
         }
 
+        private bool checkExisted(string maHoSo)
+        {
+            bool MaHoSoExist = false;
+            string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"];
+            using (SqlConnection cnn = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT maHoSo FROM GiaHanVayVon WHERE [maHoSo] = @maHoSo", cnn))
+                {
+                    cnn.Open();
+                    cmd.Parameters.AddWithValue("@maHoSo", cbID.SelectedItem.ToString());
+                    DataTable dtAnyData = new DataTable();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    dtAnyData.Load(reader);
+                    if (dtAnyData.Rows.Count > 0)
+                    {
+                        MaHoSoExist = true;
+                    }
+                }
+            }
+            return MaHoSoExist;
+        }
+
         private bool check(string id)
         {
             bool MaGiaHanExist = false;
@@ -150,11 +172,19 @@ namespace QuanLyHeThongNganHang
         {
             if (IsValidated())
             {
-                LuuThongTin((int)Save.save);
-                tenKH = labelTenKH.Text;
-                Thread thread = new Thread(new ThreadStart(showMain));
-                thread.Start();
-                this.Dispose();
+                string id = Convert.ToString(cbID.SelectedValue);
+                if (!checkExisted(id))
+                {
+                    MessageBox.Show("Mã hồ sơ đã đăng ký gia hạn trước đó", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    LuuThongTin((int)Save.save);
+                    tenKH = labelTenKH.Text;
+                    Thread thread = new Thread(new ThreadStart(showMain));
+                    thread.Start();
+                    this.Dispose();
+                }
             }
         }
 

@@ -31,10 +31,10 @@ C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\o
 C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\bin\Debug\QuanLyHeThongNganHang.exe.config
 C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\bin\Debug\QuanLyHeThongNganHang.exe
 C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\bin\Debug\QuanLyHeThongNganHang.pdb
-C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.csprojAssemblyReference.cache
 C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmDangKyKhachHang.resources
 C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmDangKyNganHang.resources
 C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmDangNhap.resources
+C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmDuyetGiaHan.resources
 C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmGiaHanNo.resources
 C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmGuiHoSoVayVon.resources
 C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmHopDong.resources
@@ -49,4 +49,3 @@ C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\ob
 C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.csproj.CoreCompileInputs.cache
 C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.exe
 C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.pdb
-C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmDuyetGiaHan.resources
