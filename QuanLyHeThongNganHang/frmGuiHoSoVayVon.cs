@@ -158,10 +158,12 @@ namespace QuanLyHeThongNganHang
             this.Controls.Add(dt);
         }
 
+        public static string tenKH = "";
         private void btnSend_Click(object sender, EventArgs e)
         {
             if (IsValidated())
             {
+                tenKH = lblTenKH.Text;
                 LuuThongTin((int)Save.save);
                 txtSoTien.Clear();
                 txtKyHan.Clear();
@@ -172,11 +174,13 @@ namespace QuanLyHeThongNganHang
         private void showKhachHang()
         {
             frmMainKhachHang main = new frmMainKhachHang();
+            main.Sender(tenKH);
             main.ShowDialog();
         }
 
         private void quayVềToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            tenKH = lblTenKH.Text;
             Thread thread = new Thread(new ThreadStart(showKhachHang));
             thread.Start();
             this.Dispose();

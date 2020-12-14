@@ -29,14 +29,17 @@ namespace QuanLyHeThongNganHang
             labelTenNV.Text = tenNV;
         }
 
+        public static string tenNV = "";
         private void showMain()
         {
             frmMainNganHang main = new frmMainNganHang();
+            main.Sender(tenNV);
             main.ShowDialog();
         }
 
         private void quayVềToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            tenNV = labelTenNV.Text;
             Thread thread = new Thread(new ThreadStart(showMain));
             thread.Start();
             this.Dispose();

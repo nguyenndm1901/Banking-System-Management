@@ -32,6 +32,7 @@
             this.quayVềToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelTenKH = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtKyHanCu = new System.Windows.Forms.TextBox();
@@ -51,7 +52,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDangKy = new System.Windows.Forms.Button();
-            this.labelTenKH = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +71,7 @@
             this.quayVềToolStripMenuItem.Name = "quayVềToolStripMenuItem";
             this.quayVềToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.quayVềToolStripMenuItem.Text = "Quay về";
+            this.quayVềToolStripMenuItem.Click += new System.EventHandler(this.quayVềToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -108,6 +109,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(306, 331);
             this.panel1.TabIndex = 2;
+            // 
+            // labelTenKH
+            // 
+            this.labelTenKH.Location = new System.Drawing.Point(98, 36);
+            this.labelTenKH.Name = "labelTenKH";
+            this.labelTenKH.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelTenKH.Size = new System.Drawing.Size(204, 23);
+            this.labelTenKH.TabIndex = 20;
+            this.labelTenKH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
             // 
@@ -280,15 +290,6 @@
             this.btnDangKy.Text = "Gia Hạn";
             this.btnDangKy.UseVisualStyleBackColor = true;
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
-            // 
-            // labelTenKH
-            // 
-            this.labelTenKH.Location = new System.Drawing.Point(98, 36);
-            this.labelTenKH.Name = "labelTenKH";
-            this.labelTenKH.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelTenKH.Size = new System.Drawing.Size(204, 23);
-            this.labelTenKH.TabIndex = 20;
-            this.labelTenKH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmGiaHanNo
             // 

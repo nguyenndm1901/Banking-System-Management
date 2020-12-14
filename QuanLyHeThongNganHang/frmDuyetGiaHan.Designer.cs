@@ -33,24 +33,28 @@ namespace QuanLyHeThongNganHang
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quayVềToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvGiaHan = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelTenNV = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelTenKH = new System.Windows.Forms.Label();
-            this.labelMaDon = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labelMaHoSo = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.labelLyDo = new System.Windows.Forms.Label();
             this.labelKyHanMoi = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.labelKyHanCu = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.labelLyDo = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.labelMaHoSo = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.labelMaDon = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.labelTenKH = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelTenNV = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dgvDuyet = new System.Windows.Forms.DataGridView();
+            this.labelNgayDK = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.brnReject = new System.Windows.Forms.Button();
+            this.btnAccept = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGiaHan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDuyet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -84,6 +88,8 @@ namespace QuanLyHeThongNganHang
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.labelNgayDK);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.labelKyHanMoi);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.labelKyHanCu);
@@ -100,68 +106,61 @@ namespace QuanLyHeThongNganHang
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 58);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(647, 163);
+            this.groupBox1.Size = new System.Drawing.Size(647, 195);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // dgvGiaHan
+            // labelKyHanMoi
             // 
-            this.dgvGiaHan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGiaHan.Location = new System.Drawing.Point(12, 227);
-            this.dgvGiaHan.Name = "dgvGiaHan";
-            this.dgvGiaHan.Size = new System.Drawing.Size(647, 207);
-            this.dgvGiaHan.TabIndex = 0;
+            this.labelKyHanMoi.Location = new System.Drawing.Point(490, 154);
+            this.labelKyHanMoi.Name = "labelKyHanMoi";
+            this.labelKyHanMoi.Size = new System.Drawing.Size(121, 20);
+            this.labelKyHanMoi.TabIndex = 13;
+            this.labelKyHanMoi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // label12
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nhân Viên: ";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(421, 158);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(65, 13);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Kỳ Hạn Mới:";
             // 
-            // labelTenNV
+            // labelKyHanCu
             // 
-            this.labelTenNV.Location = new System.Drawing.Point(75, 12);
-            this.labelTenNV.Name = "labelTenNV";
-            this.labelTenNV.Size = new System.Drawing.Size(340, 20);
-            this.labelTenNV.TabIndex = 1;
-            this.labelTenNV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelKyHanCu.Location = new System.Drawing.Point(490, 117);
+            this.labelKyHanCu.Name = "labelKyHanCu";
+            this.labelKyHanCu.Size = new System.Drawing.Size(121, 20);
+            this.labelKyHanCu.TabIndex = 11;
+            this.labelKyHanCu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // label14
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Khách Hàng:";
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(421, 121);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(61, 13);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Kỳ Hạn Cũ:";
             // 
-            // labelTenKH
+            // labelLyDo
             // 
-            this.labelTenKH.Location = new System.Drawing.Point(75, 45);
-            this.labelTenKH.Name = "labelTenKH";
-            this.labelTenKH.Size = new System.Drawing.Size(340, 20);
-            this.labelTenKH.TabIndex = 3;
-            this.labelTenKH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelLyDo.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelLyDo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelLyDo.Location = new System.Drawing.Point(92, 80);
+            this.labelLyDo.Name = "labelLyDo";
+            this.labelLyDo.Size = new System.Drawing.Size(294, 75);
+            this.labelLyDo.TabIndex = 9;
             // 
-            // labelMaDon
+            // label9
             // 
-            this.labelMaDon.Location = new System.Drawing.Point(490, 12);
-            this.labelMaDon.Name = "labelMaDon";
-            this.labelMaDon.Size = new System.Drawing.Size(121, 20);
-            this.labelMaDon.TabIndex = 5;
-            this.labelMaDon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(421, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Mã Đơn:";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 84);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 13);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Lý Do Gia Hạn:";
             // 
             // labelMaHoSo
             // 
@@ -180,73 +179,125 @@ namespace QuanLyHeThongNganHang
             this.label8.TabIndex = 6;
             this.label8.Text = "Mã Hồ Sơ:";
             // 
-            // label9
+            // labelMaDon
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 84);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Lý Do Gia Hạn:";
+            this.labelMaDon.Location = new System.Drawing.Point(490, 12);
+            this.labelMaDon.Name = "labelMaDon";
+            this.labelMaDon.Size = new System.Drawing.Size(121, 20);
+            this.labelMaDon.TabIndex = 5;
+            this.labelMaDon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelLyDo
+            // label6
             // 
-            this.labelLyDo.Location = new System.Drawing.Point(92, 84);
-            this.labelLyDo.Name = "labelLyDo";
-            this.labelLyDo.Size = new System.Drawing.Size(323, 76);
-            this.labelLyDo.TabIndex = 9;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(421, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Mã Đơn:";
             // 
-            // labelKyHanMoi
+            // labelTenKH
             // 
-            this.labelKyHanMoi.Location = new System.Drawing.Point(490, 113);
-            this.labelKyHanMoi.Name = "labelKyHanMoi";
-            this.labelKyHanMoi.Size = new System.Drawing.Size(121, 20);
-            this.labelKyHanMoi.TabIndex = 13;
-            this.labelKyHanMoi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTenKH.Location = new System.Drawing.Point(75, 45);
+            this.labelTenKH.Name = "labelTenKH";
+            this.labelTenKH.Size = new System.Drawing.Size(340, 20);
+            this.labelTenKH.TabIndex = 3;
+            this.labelTenKH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label12
+            // label3
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(421, 117);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 13);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Kỳ Hạn Mới:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 49);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Khách Hàng:";
             // 
-            // labelKyHanCu
+            // labelTenNV
             // 
-            this.labelKyHanCu.Location = new System.Drawing.Point(490, 80);
-            this.labelKyHanCu.Name = "labelKyHanCu";
-            this.labelKyHanCu.Size = new System.Drawing.Size(121, 20);
-            this.labelKyHanCu.TabIndex = 11;
-            this.labelKyHanCu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTenNV.Location = new System.Drawing.Point(75, 12);
+            this.labelTenNV.Name = "labelTenNV";
+            this.labelTenNV.Size = new System.Drawing.Size(340, 20);
+            this.labelTenNV.TabIndex = 1;
+            this.labelTenNV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label14
+            // label2
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(421, 84);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(61, 13);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Kỳ Hạn Cũ:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Nhân Viên: ";
+            // 
+            // dgvDuyet
+            // 
+            this.dgvDuyet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDuyet.Location = new System.Drawing.Point(12, 298);
+            this.dgvDuyet.Name = "dgvDuyet";
+            this.dgvDuyet.Size = new System.Drawing.Size(647, 200);
+            this.dgvDuyet.TabIndex = 3;
+            // 
+            // labelNgayDK
+            // 
+            this.labelNgayDK.Location = new System.Drawing.Point(506, 80);
+            this.labelNgayDK.Name = "labelNgayDK";
+            this.labelNgayDK.Size = new System.Drawing.Size(105, 20);
+            this.labelNgayDK.TabIndex = 15;
+            this.labelNgayDK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(421, 84);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Ngày Đăng Ký:";
+            // 
+            // brnReject
+            // 
+            this.brnReject.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brnReject.Location = new System.Drawing.Point(568, 259);
+            this.brnReject.Name = "brnReject";
+            this.brnReject.Size = new System.Drawing.Size(91, 33);
+            this.brnReject.TabIndex = 4;
+            this.brnReject.Text = "Reject";
+            this.brnReject.UseVisualStyleBackColor = true;
+            this.brnReject.Click += new System.EventHandler(this.brnReject_Click);
+            // 
+            // btnAccept
+            // 
+            this.btnAccept.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccept.Location = new System.Drawing.Point(471, 259);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(91, 33);
+            this.btnAccept.TabIndex = 5;
+            this.btnAccept.Text = "Accept";
+            this.btnAccept.UseVisualStyleBackColor = true;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
             // frmDuyetGiaHan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 446);
-            this.Controls.Add(this.dgvGiaHan);
+            this.ClientSize = new System.Drawing.Size(671, 510);
+            this.Controls.Add(this.btnAccept);
+            this.Controls.Add(this.brnReject);
+            this.Controls.Add(this.dgvDuyet);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmDuyetGiaHan";
-            this.Text = "frmDuyetGiaHan";
+            this.Text = "Duyệt Gia Hạn";
+            this.Load += new System.EventHandler(this.frmDuyetGiaHan_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGiaHan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDuyet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,7 +312,6 @@ namespace QuanLyHeThongNganHang
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelTenNV;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvGiaHan;
         private System.Windows.Forms.Label labelMaDon;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelTenKH;
@@ -273,5 +323,10 @@ namespace QuanLyHeThongNganHang
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label labelKyHanCu;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DataGridView dgvDuyet;
+        private System.Windows.Forms.Label labelNgayDK;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button brnReject;
+        private System.Windows.Forms.Button btnAccept;
     }
 }

@@ -161,7 +161,7 @@
             this.dateDangKy.Name = "dateDangKy";
             this.dateDangKy.Size = new System.Drawing.Size(227, 20);
             this.dateDangKy.TabIndex = 6;
-            this.dateDangKy.Value = new System.DateTime(2020, 12, 9, 0, 0, 0, 0);
+            this.dateDangKy.Value = new System.DateTime(2020, 12, 14, 0, 0, 0, 0);
             // 
             // txtKyHan
             // 

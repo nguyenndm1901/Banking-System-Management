@@ -138,9 +138,11 @@ namespace QuanLyHeThongNganHang
             return id;
         }
 
+        public static string tenKH = "";
         private void showMain()
         {
             frmMainKhachHang main = new frmMainKhachHang();
+            main.Sender(tenKH);
             main.ShowDialog();
         }
 
@@ -149,6 +151,7 @@ namespace QuanLyHeThongNganHang
             if (IsValidated())
             {
                 LuuThongTin((int)Save.save);
+                tenKH = labelTenKH.Text;
                 Thread thread = new Thread(new ThreadStart(showMain));
                 thread.Start();
                 this.Dispose();
@@ -217,6 +220,14 @@ namespace QuanLyHeThongNganHang
             {
 
             }
+        }
+
+        private void quayVềToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tenKH = labelTenKH.Text;
+            Thread thread = new Thread(new ThreadStart(showMain));
+            thread.Start();
+            this.Dispose();
         }
     }
 }

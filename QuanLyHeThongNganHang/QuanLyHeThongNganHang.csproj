@@ -125,6 +125,9 @@
     <Compile Include="frmQuenMatKhau.Designer.cs">
       <DependentUpon>frmQuenMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="GiaHan_BUS.cs" />
+    <Compile Include="GiaHan_DAL.cs" />
+    <Compile Include="GiaHan_DTO.cs" />
     <Compile Include="HoSo_BUS.cs" />
     <Compile Include="HoSo_DAL.cs" />
     <Compile Include="HoSo_DTO.cs" />
