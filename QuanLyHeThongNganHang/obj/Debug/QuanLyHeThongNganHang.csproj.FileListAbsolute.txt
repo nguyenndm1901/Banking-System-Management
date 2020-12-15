@@ -49,6 +49,6 @@ C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\ob
 C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.csproj.CoreCompileInputs.cache
 C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.exe
 C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.pdb
-C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.csprojAssemblyReference.cache
 C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmKiemTraHoSo.resources
 C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmTaiSanTheChap.resources
+C:\Users\hamvu\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.csprojAssemblyReference.cache

@@ -33,8 +33,8 @@
             this.thoátĐăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.cbAgree = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -44,19 +44,20 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbCoPhieu = new System.Windows.Forms.CheckBox();
+            this.cbOther = new System.Windows.Forms.CheckBox();
+            this.cbMoto = new System.Windows.Forms.CheckBox();
+            this.cbTraiPhieu = new System.Windows.Forms.CheckBox();
+            this.txtOther = new System.Windows.Forms.TextBox();
+            this.cbCar = new System.Windows.Forms.CheckBox();
+            this.cbSoDo = new System.Windows.Forms.CheckBox();
             this.labelSoTien = new System.Windows.Forms.Label();
             this.labelKyHan = new System.Windows.Forms.Label();
-            this.cbSoDo = new System.Windows.Forms.CheckBox();
-            this.cbCar = new System.Windows.Forms.CheckBox();
-            this.cbTraiPhieu = new System.Windows.Forms.CheckBox();
-            this.cbOther = new System.Windows.Forms.CheckBox();
-            this.txtOther = new System.Windows.Forms.TextBox();
-            this.cbMoto = new System.Windows.Forms.CheckBox();
-            this.cbCoPhieu = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.labelMaHopDong = new System.Windows.Forms.Label();
             this.labelMaHoSo = new System.Windows.Forms.Label();
+            this.test = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -100,17 +101,6 @@
             this.panel1.Size = new System.Drawing.Size(424, 309);
             this.panel1.TabIndex = 2;
             // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(418, 36);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "ĐIỀU KHOẢN";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -124,6 +114,17 @@
             this.textBox1.Size = new System.Drawing.Size(416, 265);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = resources.GetString("textBox1.Text");
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Maroon;
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(418, 36);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "ĐIỀU KHOẢN";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cbAgree
             // 
@@ -207,6 +208,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.test);
             this.groupBox1.Controls.Add(this.cbCoPhieu);
             this.groupBox1.Controls.Add(this.cbOther);
             this.groupBox1.Controls.Add(this.cbMoto);
@@ -216,10 +218,85 @@
             this.groupBox1.Controls.Add(this.cbSoDo);
             this.groupBox1.Location = new System.Drawing.Point(15, 214);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(418, 153);
+            this.groupBox1.Size = new System.Drawing.Size(418, 179);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tài sản thế chấp";
+            // 
+            // cbCoPhieu
+            // 
+            this.cbCoPhieu.AutoSize = true;
+            this.cbCoPhieu.Location = new System.Drawing.Point(6, 130);
+            this.cbCoPhieu.Name = "cbCoPhieu";
+            this.cbCoPhieu.Size = new System.Drawing.Size(68, 17);
+            this.cbCoPhieu.TabIndex = 10;
+            this.cbCoPhieu.Text = "Cổ phiếu";
+            this.cbCoPhieu.UseVisualStyleBackColor = true;
+            this.cbCoPhieu.CheckedChanged += new System.EventHandler(this.cbCoPhieu_CheckedChanged);
+            // 
+            // cbOther
+            // 
+            this.cbOther.AutoSize = true;
+            this.cbOther.Location = new System.Drawing.Point(144, 64);
+            this.cbOther.Name = "cbOther";
+            this.cbOther.Size = new System.Drawing.Size(54, 17);
+            this.cbOther.TabIndex = 5;
+            this.cbOther.Text = "Khác:";
+            this.cbOther.UseVisualStyleBackColor = true;
+            this.cbOther.CheckedChanged += new System.EventHandler(this.cbOther_CheckedChanged);
+            // 
+            // cbMoto
+            // 
+            this.cbMoto.AutoSize = true;
+            this.cbMoto.Location = new System.Drawing.Point(6, 97);
+            this.cbMoto.Name = "cbMoto";
+            this.cbMoto.Size = new System.Drawing.Size(61, 17);
+            this.cbMoto.TabIndex = 8;
+            this.cbMoto.Text = "Xe máy";
+            this.cbMoto.UseVisualStyleBackColor = true;
+            this.cbMoto.CheckedChanged += new System.EventHandler(this.cbMoto_CheckedChanged);
+            // 
+            // cbTraiPhieu
+            // 
+            this.cbTraiPhieu.AutoSize = true;
+            this.cbTraiPhieu.Location = new System.Drawing.Point(144, 31);
+            this.cbTraiPhieu.Name = "cbTraiPhieu";
+            this.cbTraiPhieu.Size = new System.Drawing.Size(73, 17);
+            this.cbTraiPhieu.TabIndex = 4;
+            this.cbTraiPhieu.Text = "Trái phiếu";
+            this.cbTraiPhieu.UseVisualStyleBackColor = true;
+            this.cbTraiPhieu.CheckedChanged += new System.EventHandler(this.cbTraiPhieu_CheckedChanged);
+            // 
+            // txtOther
+            // 
+            this.txtOther.Enabled = false;
+            this.txtOther.Location = new System.Drawing.Point(204, 55);
+            this.txtOther.Multiline = true;
+            this.txtOther.Name = "txtOther";
+            this.txtOther.Size = new System.Drawing.Size(208, 92);
+            this.txtOther.TabIndex = 6;
+            // 
+            // cbCar
+            // 
+            this.cbCar.AutoSize = true;
+            this.cbCar.Location = new System.Drawing.Point(6, 64);
+            this.cbCar.Name = "cbCar";
+            this.cbCar.Size = new System.Drawing.Size(60, 17);
+            this.cbCar.TabIndex = 1;
+            this.cbCar.Text = "Xe ô tô";
+            this.cbCar.UseVisualStyleBackColor = true;
+            this.cbCar.CheckedChanged += new System.EventHandler(this.cbCar_CheckedChanged);
+            // 
+            // cbSoDo
+            // 
+            this.cbSoDo.AutoSize = true;
+            this.cbSoDo.Location = new System.Drawing.Point(6, 31);
+            this.cbSoDo.Name = "cbSoDo";
+            this.cbSoDo.Size = new System.Drawing.Size(55, 17);
+            this.cbSoDo.TabIndex = 0;
+            this.cbSoDo.Text = "Sổ đỏ";
+            this.cbSoDo.UseVisualStyleBackColor = true;
+            this.cbSoDo.CheckedChanged += new System.EventHandler(this.cbSoDo_CheckedChanged);
             // 
             // labelSoTien
             // 
@@ -238,76 +315,6 @@
             this.labelKyHan.Size = new System.Drawing.Size(282, 17);
             this.labelKyHan.TabIndex = 14;
             this.labelKyHan.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // cbSoDo
-            // 
-            this.cbSoDo.AutoSize = true;
-            this.cbSoDo.Location = new System.Drawing.Point(6, 31);
-            this.cbSoDo.Name = "cbSoDo";
-            this.cbSoDo.Size = new System.Drawing.Size(55, 17);
-            this.cbSoDo.TabIndex = 0;
-            this.cbSoDo.Text = "Sổ đỏ";
-            this.cbSoDo.UseVisualStyleBackColor = true;
-            // 
-            // cbCar
-            // 
-            this.cbCar.AutoSize = true;
-            this.cbCar.Location = new System.Drawing.Point(6, 64);
-            this.cbCar.Name = "cbCar";
-            this.cbCar.Size = new System.Drawing.Size(60, 17);
-            this.cbCar.TabIndex = 1;
-            this.cbCar.Text = "Xe ô tô";
-            this.cbCar.UseVisualStyleBackColor = true;
-            // 
-            // cbTraiPhieu
-            // 
-            this.cbTraiPhieu.AutoSize = true;
-            this.cbTraiPhieu.Location = new System.Drawing.Point(144, 31);
-            this.cbTraiPhieu.Name = "cbTraiPhieu";
-            this.cbTraiPhieu.Size = new System.Drawing.Size(73, 17);
-            this.cbTraiPhieu.TabIndex = 4;
-            this.cbTraiPhieu.Text = "Trái phiếu";
-            this.cbTraiPhieu.UseVisualStyleBackColor = true;
-            // 
-            // cbOther
-            // 
-            this.cbOther.AutoSize = true;
-            this.cbOther.Location = new System.Drawing.Point(144, 64);
-            this.cbOther.Name = "cbOther";
-            this.cbOther.Size = new System.Drawing.Size(54, 17);
-            this.cbOther.TabIndex = 5;
-            this.cbOther.Text = "Khác:";
-            this.cbOther.UseVisualStyleBackColor = true;
-            this.cbOther.CheckedChanged += new System.EventHandler(this.cbOther_CheckedChanged);
-            // 
-            // txtOther
-            // 
-            this.txtOther.Enabled = false;
-            this.txtOther.Location = new System.Drawing.Point(204, 55);
-            this.txtOther.Multiline = true;
-            this.txtOther.Name = "txtOther";
-            this.txtOther.Size = new System.Drawing.Size(208, 92);
-            this.txtOther.TabIndex = 6;
-            // 
-            // cbMoto
-            // 
-            this.cbMoto.AutoSize = true;
-            this.cbMoto.Location = new System.Drawing.Point(6, 97);
-            this.cbMoto.Name = "cbMoto";
-            this.cbMoto.Size = new System.Drawing.Size(61, 17);
-            this.cbMoto.TabIndex = 8;
-            this.cbMoto.Text = "Xe máy";
-            this.cbMoto.UseVisualStyleBackColor = true;
-            // 
-            // cbCoPhieu
-            // 
-            this.cbCoPhieu.AutoSize = true;
-            this.cbCoPhieu.Location = new System.Drawing.Point(6, 130);
-            this.cbCoPhieu.Name = "cbCoPhieu";
-            this.cbCoPhieu.Size = new System.Drawing.Size(68, 17);
-            this.cbCoPhieu.TabIndex = 10;
-            this.cbCoPhieu.Text = "Cổ phiếu";
-            this.cbCoPhieu.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -341,7 +348,15 @@
             this.labelMaHoSo.Name = "labelMaHoSo";
             this.labelMaHoSo.Size = new System.Drawing.Size(131, 18);
             this.labelMaHoSo.TabIndex = 18;
-            this.labelMaHoSo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelMaHoSo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // test
+            // 
+            this.test.Location = new System.Drawing.Point(-3, 154);
+            this.test.Name = "test";
+            this.test.Size = new System.Drawing.Size(421, 23);
+            this.test.TabIndex = 11;
+            this.test.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmHopDong
             // 
@@ -413,6 +428,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelMaHopDong;
         private System.Windows.Forms.Label labelMaHoSo;
+        private System.Windows.Forms.Label test;
     }
 }
 

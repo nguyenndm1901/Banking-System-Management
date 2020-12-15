@@ -20,9 +20,14 @@ namespace QuanLyHeThongNganHang
             InitializeComponent();
         }
 
+        private static string tenKH = "";
+        private static string maHoSo = "";
+
         private void showHopDong()
         {
             frmHopDong hd = new frmHopDong();
+            hd.SenderName(tenKH);
+            hd.SenderMaHoSo(maHoSo);
             hd.ShowDialog();
         }
 
@@ -44,6 +49,8 @@ namespace QuanLyHeThongNganHang
                 if (IsValidated())
                 {
                     Thread thread = new Thread(new ThreadStart(showHopDong));
+                    tenKH = cbTenKH.Text;
+                    maHoSo = cbMaHoSo.Text;
                     thread.Start();
                     this.Dispose();
                 }
