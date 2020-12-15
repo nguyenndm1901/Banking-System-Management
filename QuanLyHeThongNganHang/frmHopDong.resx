@@ -120,4 +120,33 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Điều 1. Số Tiền, Thời Hạn, Mục Đích Sử Dụng Tiền Vay, Điều Kiện Giải Ngân Và Thỏa Thuận Liên Quan
+1.  Các Bên đồng ý rằng, Số tiền vay, Thời hạn cho vay và Mục đích sử dụng tiền vay được các Bên thỏa thuận và ghi nhận tại phần Xác nhận chấp thuận cho vay của ANM đối với Khách hàng. Đề nghị vay vốn của Khách hàng và Xác nhận chấp thuận cho vay của ANM là các tài liệu không tách rời của Bản Điều khoản và Điều kiện này.
+2.  Khách  hàng  có  trách  nhiệm  sử  dụng  vốn  vay đúng  mục  đích  và  cam  kết  chịu  trách  nhiệm trước pháp luật và ANM về mục đích sử dụng vốn vay của mình. 
+3.  ANM chỉ giải ngân cho Khách hàng nếu Khách hàng và các bên liên quan (nếu có) đã đáp ứng tất cả các điều kiện, thủ tục theo quy định của pháp luật và quy định của ANM theo sản phẩm cho vay mà Khách hàng tham gia. ANM có quyền từ chối giải ngân trong trường hợp quy định của pháp luật không cho phép giải ngân và/hoặc xảy ra trường hợp bất khả kháng nằm ngoài khả năng kiểm soát của ANM dẫn đến việc ANM không thể giải ngân.
+4.  Phương thức giải ngân: theo quy định tại Đề nghị vay vốn của Khách hàng và Xác nhận chấp thuận cho vay của ANM.
+5.  Phương thức cho vay: Cho vay từng lần.
+6.  Thủ tục rút vốn: Mỗi lần rút vốn vay, Khách hàng phải hoàn thiện các thủ tục, chứng từ liên quan theo yêu cầu của ANM. Trường hợp Khách hàng rút vốn vay nhiều lần, mỗi lần thực hiện rút vốn, Khách hàng và ANM thực hiện ký Khế ước nhận nợ.
+7.  Thời điểm nhận nợ: Là thời điểm ANM giải ngân khoản vay theo phương thức mà Khách hàng đề nghị tại Đề nghị vay vốn Khách hàng
+
+Điều 2. Lãi Suất, Phí Và Các Chi Phí Khác
+1.  Lãi suất cho vay trong hạn và cơ chế điều chỉnh lãi suất (nếu có) được ANM và Khách hàng thỏa thuận và ghi nhận trong Xác nhận chấp thuận cho vay của ANM và các tài liệu giao dịch liên quan giữa hai bên. 
+2.  Lãi suất cơ cấu lại thời hạn trả nợ: Thực hiện theo quy định của ANM tại thời điểm cơ cấu lại, nhưng không vượt quá 150% lãi suất nợ trong hạn tại thời điểm cơ cấu lại. Mức lãi suất cơ cấu lại cũng được điều chỉnh định kỳ như cách điều chỉnh lãi suất cho vay trong hạn theo thỏa thuận của Các Bên trong Hợp đồng này.
+3.  Lãi suất quá hạn: Bằng 150% mức lãi suất trong hạn. Kể từ thời điểm phát sinh nợ quá hạn, khi đến kỳ điều chỉnh lãi suất, lãi suất cho vay trong hạn vẫn được điều chỉnh theo phương thức do Các Bên thỏa thuận trong Hợp đồng này, lãi suất quá hạn của kỳ đó cũng sẽ thay đổi theo - bằng 150% lãi suất cho vay trong hạn sau khi đã điều chỉnh định kỳ.
+4.  Cách thức tính lãi:
+a)  Tiền lãi được tính trên cơ sở một tháng là 30 ngày, một năm là 360 ngày. Số tiền lãi phải trả mỗi kỳ = Dư nợ gốc thực tế tại thời điểm tính lãi  x  Số ngày thực tế của kỳ tính lãi  x  Lãi suất đang áp dụng tại thời điểm tính lãi / 30 (nếu lãi suất tính theo tháng), 360 (nếu lãi suất tính theo năm).
+b)  Tiền lãi sẽ được tính từ khi Khách hàng nhận nợ vốn vay cho đến khi Khách hàng thực tế thanh toán hết toàn bộ dư nợ cho ANM, không tính ngày trả nợ. 
+5.  Các khoản phí: Khách hàng có nghĩa vụ thanh toán cho ANM các khoản phí, chi phí và các nghĩa vụ tài chính khác (nếu có) theo đúng thời hạn, số lượng và phương thức mà ANM yêu cầu, cụ thể:
+a)  Phí trả nợ trước hạn: theo quy định tại Khoản 4, Điều 4 Bản Điều khoản và Điều kiện này.
+b)  Khách hàng có nghĩa vụ thanh toán cho ANM các khoản phí khác được ANM niêm yết tại quầy giao dịch và/hoặc trên website của ANM (www.vpbank.com.vn) phù hợp với các quy định của pháp luật có liên quan.
+
+Điều 3. Biện Pháp Bảo Đảm Tiền Vay
+1.  ANM đồng ý cho Khách hàng vay vốn trên cơ sở khả năng tài chính và uy tín cá nhân của Khách hàng, không áp dụng biện pháp bảo đảm tiền vay.
+2.  Khách hàng đồng ý rằng trong thời hạn vay vốn, nếu xảy ra bất cứ sự kiện nào ảnh hưởng hoặc có khả  năng  ảnh  hưởng  đến  khả  năng  trả  nợ  của Khách hàng hoặc khiến Khách hàng không đủ điều kiện để được vay không có bảo đảm theo quy định của ANM theo sản phẩm mà Khách hàng tham gia, ANM có quyền yêu cầu Khách hàng bổ sung tài sản bảo đảm. Trong vòng 15 (mười lăm) ngày kể từ ngày ghi trong Thông báo bổ sung tài sản của ANM, Khách hàng phải đưa tài sản thuộc sở hữu của mình hoặc của Bên thứ ba vào thế chấp, cầm cố hoặc ký quỹ cho ANM. Tài sản đưa vào cầm cố, thế chấp và/hoặc ký quỹ phải có giá trị (theo định giá của ANM) đủ để bảo đảm cho toàn bộ nghĩa vụ trả nợ gốc, lãi và các chi phí phát sinh khác của  Khách  hàng  đối  với  ANM  theo  Hợp  đồng này và phải được ANM chấp thuận. Khách hàng phải chịu toàn bộ các chi phí liên quan đến việc hoàn thiện thủ tục bảo đảm tiền vay (công chứng, đăng ký giao dịch bảo đảm vv...) theo quy định của pháp luật. Nếu Khách hàng không thực hiện hoặc thực hiện không đầy đủ nghĩa vụ bổ sung tài sản bảo đảm và/hoặc thu xếp biện pháp bảo đảm khác theo đúng quy định này trong thời hạn nêu trên, thì ANM có quyền chấm dứt cho vay trước hạn và thu hồi nợ theo đúng quy định tại Hợp đồng này.
+</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>29</value>
+  </metadata>
 </root>

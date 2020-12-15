@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gbServices = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnHopDong = new System.Windows.Forms.Button();
             this.btnDuyetGiaHan = new System.Windows.Forms.Button();
             this.btnHoSoVayVon = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -56,7 +56,7 @@
             // gbServices
             // 
             this.gbServices.Controls.Add(this.button1);
-            this.gbServices.Controls.Add(this.button3);
+            this.gbServices.Controls.Add(this.btnHopDong);
             this.gbServices.Controls.Add(this.btnDuyetGiaHan);
             this.gbServices.Controls.Add(this.btnHoSoVayVon);
             this.gbServices.Location = new System.Drawing.Point(12, 126);
@@ -76,15 +76,16 @@
             this.button1.Text = "Quản Lý Tài Sản Thế Chấp";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnHopDong
             // 
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(6, 171);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(391, 70);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Hợp Đồng";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnHopDong.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHopDong.Location = new System.Drawing.Point(6, 171);
+            this.btnHopDong.Name = "btnHopDong";
+            this.btnHopDong.Size = new System.Drawing.Size(391, 70);
+            this.btnHopDong.TabIndex = 2;
+            this.btnHopDong.Text = "Hợp Đồng";
+            this.btnHopDong.UseVisualStyleBackColor = true;
+            this.btnHopDong.Click += new System.EventHandler(this.btnHopDong_Click);
             // 
             // btnDuyetGiaHan
             // 
@@ -161,7 +162,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gbServices;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnHopDong;
         private System.Windows.Forms.Button btnDuyetGiaHan;
         private System.Windows.Forms.Button btnHoSoVayVon;
         private System.Windows.Forms.MenuStrip menuStrip1;

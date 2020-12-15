@@ -71,5 +71,18 @@ namespace QuanLyHeThongNganHang
             thread.Start();
             this.Dispose();
         }
+
+        private void showHopDong()
+        {
+            frmKiemTraHoSo hd = new frmKiemTraHoSo();
+            hd.ShowDialog();
+        }
+
+        private void btnHopDong_Click(object sender, EventArgs e)
+        {
+            Thread thread = new Thread(new ThreadStart(showHopDong));
+            thread.Start();
+            this.Dispose();
+        }
     }
 }
