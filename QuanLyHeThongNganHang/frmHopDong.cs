@@ -165,17 +165,11 @@ namespace QuanLyHeThongNganHang
             {
                 value.Add("Trái phiếu");
             }
-            if (cbOther.Checked == true)
+            if (cbOther.Checked)
             {
-                txtOther.Enabled = true;
-                value.Add(txtOther.Text);
+                value.Add(txtOther.Text);            
             }
-            else if (cbOther.Checked == false)
-            {
-                txtOther.Enabled = false;
-                value.Remove(txtOther.Text);
-            }
-                test.Text = string.Join(" | ", value);
+                txtTaiSan.Text = string.Join(" | ", value);
         }
 
         private void cbSoDo_CheckedChanged(object sender, EventArgs e)
@@ -206,6 +200,65 @@ namespace QuanLyHeThongNganHang
         private void cbOther_CheckedChanged(object sender, EventArgs e)
         {
             updateTextBox();
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            if (IsValidated())
+            {
+
+            }
+        }
+
+        private bool IsValidated()
+        {
+            if (txtTaiSan.Text.Trim() == null)
+            {
+                MessageBox.Show("Đánh dấu vào một hoặc nhiều loại tài sản để thế chấp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (txtTaiSan.Text.Trim() != null)
+            {
+                if ((cbOther.Checked == false) && (txtOther.Text.Trim() != null))
+                {
+                    MessageBox.Show("Vui lòng đánh dấu vào ô 'Khác'", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                if ((cbOther.Checked == true) && (txtOther.Text.Trim() == null))
+                {
+                    MessageBox.Show("Vui lòng điền tài sản để thế chấp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private void LuuThongTin(int luu)
+        {
+            try
+            {
+                string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"];
+                using (SqlConnection cnn = new SqlConnection(ConnectionString))
+                {
+                    cnn.Open();
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO [HopDong](id,maHoSo,benA,benB,soTien,kyHan,taiSan) VALUES (@id,@maHoSo,@benA,@benB,@soTien,@kyHan,@taiSan)", cnn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", labelMaHopDong.Text.Trim());
+                        cmd.Parameters.AddWithValue("@maHoSo", labelMaHoSo.Text.Trim());
+                        cmd.Parameters.AddWithValue("@benA", labelTenNH.Text.Trim());
+                        cmd.Parameters.AddWithValue("@benB", labelTenKH.Text.Trim());
+                        cmd.Parameters.AddWithValue("@soTien", labelSoTien.Text.Trim());
+                        cmd.Parameters.AddWithValue("@kyHan", labelKyHan.Text.Trim());
+                        cmd.Parameters.AddWithValue("@taiSan", txtTaiSan.Text.Trim());
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show("Tạo hợp đồng thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }

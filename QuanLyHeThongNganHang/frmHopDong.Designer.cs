@@ -57,7 +57,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.labelMaHopDong = new System.Windows.Forms.Label();
             this.labelMaHoSo = new System.Windows.Forms.Label();
-            this.test = new System.Windows.Forms.Label();
+            this.txtTaiSan = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -156,6 +156,7 @@
             this.btnCreate.TabIndex = 6;
             this.btnCreate.Text = "Tạo hợp đồng";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // labelTenNH
             // 
@@ -208,7 +209,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.test);
+            this.groupBox1.Controls.Add(this.txtTaiSan);
             this.groupBox1.Controls.Add(this.cbCoPhieu);
             this.groupBox1.Controls.Add(this.cbOther);
             this.groupBox1.Controls.Add(this.cbMoto);
@@ -218,7 +219,7 @@
             this.groupBox1.Controls.Add(this.cbSoDo);
             this.groupBox1.Location = new System.Drawing.Point(15, 214);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(418, 179);
+            this.groupBox1.Size = new System.Drawing.Size(418, 204);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tài sản thế chấp";
@@ -269,7 +270,6 @@
             // 
             // txtOther
             // 
-            this.txtOther.Enabled = false;
             this.txtOther.Location = new System.Drawing.Point(204, 55);
             this.txtOther.Multiline = true;
             this.txtOther.Name = "txtOther";
@@ -350,19 +350,20 @@
             this.labelMaHoSo.TabIndex = 18;
             this.labelMaHoSo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // test
+            // txtTaiSan
             // 
-            this.test.Location = new System.Drawing.Point(-3, 154);
-            this.test.Name = "test";
-            this.test.Size = new System.Drawing.Size(421, 23);
-            this.test.TabIndex = 11;
-            this.test.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtTaiSan.Location = new System.Drawing.Point(6, 153);
+            this.txtTaiSan.Multiline = true;
+            this.txtTaiSan.Name = "txtTaiSan";
+            this.txtTaiSan.ReadOnly = true;
+            this.txtTaiSan.Size = new System.Drawing.Size(406, 45);
+            this.txtTaiSan.TabIndex = 11;
             // 
             // frmHopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 403);
+            this.ClientSize = new System.Drawing.Size(875, 443);
             this.Controls.Add(this.labelMaHoSo);
             this.Controls.Add(this.labelMaHopDong);
             this.Controls.Add(this.label6);
@@ -428,7 +429,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelMaHopDong;
         private System.Windows.Forms.Label labelMaHoSo;
-        private System.Windows.Forms.Label test;
+        private System.Windows.Forms.TextBox txtTaiSan;
     }
 }
 
