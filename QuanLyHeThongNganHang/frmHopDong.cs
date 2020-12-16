@@ -24,7 +24,7 @@ namespace QuanLyHeThongNganHang
             InitializeComponent();
             SenderName = new sendName(getName);
             SenderMaHoSo = new sendMaHoSo(getMaHoSo);
-            
+            cbOther.Enabled = false;
         }
 
         private void getName(string tenKH)
@@ -206,29 +206,29 @@ namespace QuanLyHeThongNganHang
         {
             if (IsValidated())
             {
-
+                LuuThongTin((int)Save.save);
             }
         }
-
+        public enum Save
+        {
+            save = 1,
+        }
         private bool IsValidated()
         {
-            if (txtTaiSan.Text.Trim() == null)
+            if (txtTaiSan.Text.Trim() == "")
             {
                 MessageBox.Show("Đánh dấu vào một hoặc nhiều loại tài sản để thế chấp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            else if (txtTaiSan.Text.Trim() != null)
+            if ((cbOther.Checked == false) && (txtOther.Text.Trim() != ""))
             {
-                if ((cbOther.Checked == false) && (txtOther.Text.Trim() != null))
-                {
-                    MessageBox.Show("Vui lòng đánh dấu vào ô 'Khác'", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
-                if ((cbOther.Checked == true) && (txtOther.Text.Trim() == null))
-                {
-                    MessageBox.Show("Vui lòng điền tài sản để thế chấp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
+                MessageBox.Show("Vui lòng đánh dấu vào ô 'Khác'", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if ((cbOther.Checked == true) && (txtOther.Text.Trim() == ""))
+            {
+                MessageBox.Show("Vui lòng điền tài sản để thế chấp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             return true;
         }
@@ -257,8 +257,21 @@ namespace QuanLyHeThongNganHang
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message.ToString(), "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void txtOther_TextChanged(object sender, EventArgs e)
+        {
+            if(txtOther.Text.Trim() != "")
+            {
+                cbOther.Enabled = true;
+            }
+            else if(txtOther.Text.Trim() == "")
+            {
+                cbOther.Enabled = false;
+            }
+        }
+
     }
 }

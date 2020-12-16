@@ -44,6 +44,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTaiSan = new System.Windows.Forms.TextBox();
             this.cbCoPhieu = new System.Windows.Forms.CheckBox();
             this.cbOther = new System.Windows.Forms.CheckBox();
             this.cbMoto = new System.Windows.Forms.CheckBox();
@@ -57,7 +58,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.labelMaHopDong = new System.Windows.Forms.Label();
             this.labelMaHoSo = new System.Windows.Forms.Label();
-            this.txtTaiSan = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -224,6 +224,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tài sản thế chấp";
             // 
+            // txtTaiSan
+            // 
+            this.txtTaiSan.Location = new System.Drawing.Point(6, 153);
+            this.txtTaiSan.Multiline = true;
+            this.txtTaiSan.Name = "txtTaiSan";
+            this.txtTaiSan.ReadOnly = true;
+            this.txtTaiSan.Size = new System.Drawing.Size(406, 45);
+            this.txtTaiSan.TabIndex = 11;
+            // 
             // cbCoPhieu
             // 
             this.cbCoPhieu.AutoSize = true;
@@ -275,6 +284,8 @@
             this.txtOther.Name = "txtOther";
             this.txtOther.Size = new System.Drawing.Size(208, 92);
             this.txtOther.TabIndex = 6;
+            this.txtOther.TextChanged += new System.EventHandler(this.txtOther_TextChanged);
+     
             // 
             // cbCar
             // 
@@ -349,15 +360,6 @@
             this.labelMaHoSo.Size = new System.Drawing.Size(131, 18);
             this.labelMaHoSo.TabIndex = 18;
             this.labelMaHoSo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtTaiSan
-            // 
-            this.txtTaiSan.Location = new System.Drawing.Point(6, 153);
-            this.txtTaiSan.Multiline = true;
-            this.txtTaiSan.Name = "txtTaiSan";
-            this.txtTaiSan.ReadOnly = true;
-            this.txtTaiSan.Size = new System.Drawing.Size(406, 45);
-            this.txtTaiSan.TabIndex = 11;
             // 
             // frmHopDong
             // 
