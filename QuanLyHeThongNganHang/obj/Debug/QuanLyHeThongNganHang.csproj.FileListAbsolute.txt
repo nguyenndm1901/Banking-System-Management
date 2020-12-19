@@ -76,3 +76,7 @@ D:\Clone\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThong
 D:\Clone\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.csproj.CoreCompileInputs.cache
 D:\Clone\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.exe
 D:\Clone\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.pdb
+C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmDuyetGiaHan.resources
+C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmHopDong.resources
+C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmKiemTraHoSo.resources
+C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmTaiSanTheChap.resources

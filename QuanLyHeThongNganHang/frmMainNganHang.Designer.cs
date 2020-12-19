@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.gbServices = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTaiSanTheChap = new System.Windows.Forms.Button();
             this.btnHopDong = new System.Windows.Forms.Button();
             this.btnDuyetGiaHan = new System.Windows.Forms.Button();
             this.btnHoSoVayVon = new System.Windows.Forms.Button();
@@ -55,7 +55,7 @@
             // 
             // gbServices
             // 
-            this.gbServices.Controls.Add(this.button1);
+            this.gbServices.Controls.Add(this.btnTaiSanTheChap);
             this.gbServices.Controls.Add(this.btnHopDong);
             this.gbServices.Controls.Add(this.btnDuyetGiaHan);
             this.gbServices.Controls.Add(this.btnHoSoVayVon);
@@ -66,15 +66,16 @@
             this.gbServices.TabStop = false;
             this.gbServices.Text = "Dịch vụ:";
             // 
-            // button1
+            // btnTaiSanTheChap
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(6, 247);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(391, 70);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Quản Lý Tài Sản Thế Chấp";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnTaiSanTheChap.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaiSanTheChap.Location = new System.Drawing.Point(6, 247);
+            this.btnTaiSanTheChap.Name = "btnTaiSanTheChap";
+            this.btnTaiSanTheChap.Size = new System.Drawing.Size(391, 70);
+            this.btnTaiSanTheChap.TabIndex = 3;
+            this.btnTaiSanTheChap.Text = "Quản Lý Tài Sản Thế Chấp";
+            this.btnTaiSanTheChap.UseVisualStyleBackColor = true;
+            this.btnTaiSanTheChap.Click += new System.EventHandler(this.btnTaiSanTheChap_Click);
             // 
             // btnHopDong
             // 
@@ -168,6 +169,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem thoátĐăngNhậpToolStripMenuItem;
         private System.Windows.Forms.Label labelTenNV;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTaiSanTheChap;
     }
 }

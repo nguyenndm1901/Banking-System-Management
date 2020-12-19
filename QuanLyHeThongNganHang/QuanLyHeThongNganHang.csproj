@@ -145,6 +145,9 @@
     <Compile Include="frmTaiSanTheChap.Designer.cs">
       <DependentUpon>frmTaiSanTheChap.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaiSan_BUS.cs" />
+    <Compile Include="TaiSan_DAL.cs" />
+    <Compile Include="TaiSan_DTO.cs" />
     <EmbeddedResource Include="frmDangKyKhachHang.resx">
       <DependentUpon>frmDangKyKhachHang.cs</DependentUpon>
     </EmbeddedResource>

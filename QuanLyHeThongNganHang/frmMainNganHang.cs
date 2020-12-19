@@ -84,5 +84,18 @@ namespace QuanLyHeThongNganHang
             thread.Start();
             this.Dispose();
         }
+
+        private void showTaiSan()
+        {
+            frmTaiSanTheChap taisan = new frmTaiSanTheChap();
+            taisan.ShowDialog();
+        }
+
+        private void btnTaiSanTheChap_Click(object sender, EventArgs e)
+        {
+            Thread thread = new Thread(new ThreadStart(showTaiSan));
+            thread.Start();
+            this.Dispose();
+        }
     }
 }
