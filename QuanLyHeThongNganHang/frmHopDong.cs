@@ -202,17 +202,29 @@ namespace QuanLyHeThongNganHang
             updateTextBox();
         }
 
+        private string maHoSo = "";
+
         private void btnCreate_Click(object sender, EventArgs e)
         {
             if (IsValidated())
             {
-                LuuThongTin((int)Save.save);
+                maHoSo = labelMaHoSo.Text;
+                if (checkDuplicated(maHoSo))
+                {
+                    MessageBox.Show("Hồ sơ đã tạo hợp đồng trước đó", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    LuuThongTin((int)Save.save);
+                }
             }
         }
+
         public enum Save
         {
             save = 1,
         }
+
         private bool IsValidated()
         {
             if (txtTaiSan.Text.Trim() == "")
@@ -257,7 +269,7 @@ namespace QuanLyHeThongNganHang
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString(), "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(ex.Message.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -273,5 +285,26 @@ namespace QuanLyHeThongNganHang
             }
         }
 
+        private bool checkDuplicated(string id)
+        {
+            bool MaHoSoExist = false;
+            string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"];
+            using (SqlConnection cnn = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM HopDong WHERE [maHoSo] = @id", cnn))
+                {
+                    cnn.Open();
+                    cmd.Parameters.AddWithValue("@id", id);
+                    DataTable dtAnyData = new DataTable();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    dtAnyData.Load(reader);
+                    if (dtAnyData.Rows.Count > 0)
+                    {
+                        MaHoSoExist = true;
+                    }
+                }
+            }
+            return MaHoSoExist;
+        }
     }
 }

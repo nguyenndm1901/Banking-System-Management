@@ -47,6 +47,7 @@ namespace QuanLyHeThongNganHang
 
             dgvView.AutoGenerateColumns = false;
             dgvView.AllowUserToAddRows = false;
+            this.dgvView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvView.DataSource = listTaiSan;
 
             DataGridViewTextBoxColumn clID = new DataGridViewTextBoxColumn();

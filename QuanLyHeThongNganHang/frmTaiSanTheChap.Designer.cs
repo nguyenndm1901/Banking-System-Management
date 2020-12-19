@@ -47,7 +47,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(206, 24);
+            this.label1.Location = new System.Drawing.Point(276, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(228, 31);
             this.label1.TabIndex = 0;
@@ -66,15 +66,17 @@
             // 
             this.labelMaHopDong.Location = new System.Drawing.Point(109, 98);
             this.labelMaHopDong.Name = "labelMaHopDong";
-            this.labelMaHopDong.Size = new System.Drawing.Size(116, 21);
+            this.labelMaHopDong.Size = new System.Drawing.Size(247, 21);
             this.labelMaHopDong.TabIndex = 2;
+            this.labelMaHopDong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelMaHoSo
             // 
             this.labelMaHoSo.Location = new System.Drawing.Point(109, 133);
             this.labelMaHoSo.Name = "labelMaHoSo";
-            this.labelMaHoSo.Size = new System.Drawing.Size(116, 21);
+            this.labelMaHoSo.Size = new System.Drawing.Size(247, 21);
             this.labelMaHoSo.TabIndex = 4;
+            this.labelMaHoSo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -89,8 +91,9 @@
             // 
             this.labelTenKH.Location = new System.Drawing.Point(109, 168);
             this.labelTenKH.Name = "labelTenKH";
-            this.labelTenKH.Size = new System.Drawing.Size(116, 21);
+            this.labelTenKH.Size = new System.Drawing.Size(247, 21);
             this.labelTenKH.TabIndex = 8;
+            this.labelTenKH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label
             // 
@@ -107,7 +110,7 @@
             this.quayVềToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(642, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(779, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -120,7 +123,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(289, 98);
+            this.label3.Location = new System.Drawing.Point(337, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 21);
             this.label3.TabIndex = 10;
@@ -129,19 +132,19 @@
             // 
             // txtTaiSan
             // 
-            this.txtTaiSan.Location = new System.Drawing.Point(386, 99);
+            this.txtTaiSan.Location = new System.Drawing.Point(434, 99);
             this.txtTaiSan.Multiline = true;
             this.txtTaiSan.Name = "txtTaiSan";
             this.txtTaiSan.ReadOnly = true;
-            this.txtTaiSan.Size = new System.Drawing.Size(244, 90);
+            this.txtTaiSan.Size = new System.Drawing.Size(332, 90);
             this.txtTaiSan.TabIndex = 11;
             // 
             // dgvView
             // 
             this.dgvView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvView.Location = new System.Drawing.Point(15, 229);
+            this.dgvView.Location = new System.Drawing.Point(24, 229);
             this.dgvView.Name = "dgvView";
-            this.dgvView.Size = new System.Drawing.Size(615, 209);
+            this.dgvView.Size = new System.Drawing.Size(742, 209);
             this.dgvView.TabIndex = 12;
             this.dgvView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvView_CellClick);
             // 
@@ -149,7 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 450);
+            this.ClientSize = new System.Drawing.Size(779, 450);
             this.Controls.Add(this.dgvView);
             this.Controls.Add(this.txtTaiSan);
             this.Controls.Add(this.label3);

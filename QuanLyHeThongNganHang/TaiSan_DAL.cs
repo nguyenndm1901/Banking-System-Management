@@ -16,7 +16,7 @@ namespace QuanLyHeThongNganHang
         public List<TaiSan_DTO> select()
         {
             string query = string.Empty;
-            query += "SELECT [id] [maHoSo], [benB], [taiSan]";
+            query += "SELECT [id], [maHoSo], [benB], [taiSan]";
             query += "FROM [HopDong]";
 
             List<TaiSan_DTO> lsTaiSan = new List<TaiSan_DTO>();
