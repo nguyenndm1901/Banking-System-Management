@@ -14,7 +14,7 @@ namespace QuanLyHeThongNganHang
 {
     public partial class frmHopDong : Form
     {
-        public delegate void sendName(string tenKH);
+        public delegate void sendName(string tenKH);            // create sender to get values from previous form
         public sendName SenderName;
         public delegate void sendMaHoSo(string maHoSo);
         public sendMaHoSo SenderMaHoSo;
@@ -27,7 +27,7 @@ namespace QuanLyHeThongNganHang
             cbOther.Enabled = false;
         }
 
-        private void getName(string tenKH)
+        private void getName(string tenKH)                      // get values from previous form
         {
             labelTenKH.Text = tenKH;
         }
@@ -50,7 +50,7 @@ namespace QuanLyHeThongNganHang
             main.ShowDialog();
         }
 
-        private void trởVềToolStripMenuItem_Click(object sender, EventArgs e)
+        private void trởVềToolStripMenuItem_Click(object sender, EventArgs e)               // back to frmMainNganHang
         {
             Thread thread = new Thread(new ThreadStart(showMain));
             thread.Start();
@@ -70,7 +70,7 @@ namespace QuanLyHeThongNganHang
             cbAgree.Focus();
         }
 
-        private void cbAgree_CheckedChanged(object sender, EventArgs e)
+        private void cbAgree_CheckedChanged(object sender, EventArgs e)                     // create event for checkbox Agree
         {
             if(cbAgree.Checked == true)
             {
@@ -82,7 +82,7 @@ namespace QuanLyHeThongNganHang
             }
         }
 
-        private bool check(string id)
+        private bool check(string id)                                                       // check if MaHoSo existed in order to prevent duplicated id
         {
             bool MaHoSoExist = false;
             string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"];
@@ -104,7 +104,7 @@ namespace QuanLyHeThongNganHang
             return MaHoSoExist;
         }
 
-        private string GenerateID()
+        private string GenerateID()                                                         // automatically generate id
         {
             string id;
             Random ran = new Random();
@@ -114,7 +114,7 @@ namespace QuanLyHeThongNganHang
             return id;
         }
 
-        private string GetSoTien(string id)
+        private string GetSoTien(string id)                                                 // load values to label
         {
             string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"];
             using (SqlConnection cnn = new SqlConnection(ConnectionString))
@@ -128,7 +128,7 @@ namespace QuanLyHeThongNganHang
             }
         }
 
-        private string GetKyHan(string id)
+        private string GetKyHan(string id)                                                  // load values to label
         {
             string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"];
             using (SqlConnection cnn = new SqlConnection(ConnectionString))
@@ -142,7 +142,7 @@ namespace QuanLyHeThongNganHang
             }
         }
 
-        private void updateTextBox()
+        private void updateTextBox()                                                        // change textbox's value when a checkbox is checked or unchecked
         {
             var value = new List<string>();
             if (cbSoDo.Checked)
@@ -172,39 +172,39 @@ namespace QuanLyHeThongNganHang
                 txtTaiSan.Text = string.Join(" | ", value);
         }
 
-        private void cbSoDo_CheckedChanged(object sender, EventArgs e)
+        private void cbSoDo_CheckedChanged(object sender, EventArgs e)                      // checkbox's event
         {
             updateTextBox();
         }
 
-        private void cbCar_CheckedChanged(object sender, EventArgs e)
+        private void cbCar_CheckedChanged(object sender, EventArgs e)                      // checkbox's event
         {
             updateTextBox();
         }
 
-        private void cbMoto_CheckedChanged(object sender, EventArgs e)
+        private void cbMoto_CheckedChanged(object sender, EventArgs e)                      // checkbox's event
         {
             updateTextBox();
         }
 
-        private void cbCoPhieu_CheckedChanged(object sender, EventArgs e)
+        private void cbCoPhieu_CheckedChanged(object sender, EventArgs e)                   // checkbox's event
         {
             updateTextBox();
         }
 
-        private void cbTraiPhieu_CheckedChanged(object sender, EventArgs e)
+        private void cbTraiPhieu_CheckedChanged(object sender, EventArgs e)                 // checkbox's event
         {
             updateTextBox();
         }
 
-        private void cbOther_CheckedChanged(object sender, EventArgs e)
+        private void cbOther_CheckedChanged(object sender, EventArgs e)                     // checkbox's event
         {
             updateTextBox();
         }
 
         private string maHoSo = "";
 
-        private void btnCreate_Click(object sender, EventArgs e)
+        private void btnCreate_Click(object sender, EventArgs e)                            // buttonCreate's event
         {
             if (IsValidated())
             {
@@ -225,7 +225,7 @@ namespace QuanLyHeThongNganHang
             save = 1,
         }
 
-        private bool IsValidated()
+        private bool IsValidated()                                                          // check if all fields were filled
         {
             if (txtTaiSan.Text.Trim() == "")
             {
@@ -245,7 +245,7 @@ namespace QuanLyHeThongNganHang
             return true;
         }
 
-        private void LuuThongTin(int luu)
+        private void LuuThongTin(int luu)                                                   // save all information to database
         {
             try
             {
@@ -273,7 +273,7 @@ namespace QuanLyHeThongNganHang
             }
         }
 
-        private void txtOther_TextChanged(object sender, EventArgs e)
+        private void txtOther_TextChanged(object sender, EventArgs e)                       // textboxOther's event
         {
             if(txtOther.Text.Trim() != "")
             {
@@ -285,7 +285,7 @@ namespace QuanLyHeThongNganHang
             }
         }
 
-        private bool checkDuplicated(string id)
+        private bool checkDuplicated(string id)                                             // check if constract was created before 
         {
             bool MaHoSoExist = false;
             string ConnectionString = ConfigurationManager.AppSettings["ConnectionString"];
