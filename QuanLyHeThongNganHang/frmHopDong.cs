@@ -216,6 +216,9 @@ namespace QuanLyHeThongNganHang
                 else
                 {
                     LuuThongTin((int)Save.save);
+                    Thread thread = new Thread(new ThreadStart(showMain));
+                    thread.Start();
+                    this.Dispose();
                 }
             }
         }

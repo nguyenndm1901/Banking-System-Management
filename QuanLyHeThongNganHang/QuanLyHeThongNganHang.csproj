@@ -131,9 +131,18 @@
     <Compile Include="frmQuenMatKhau.Designer.cs">
       <DependentUpon>frmQuenMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThanhLyHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThanhLyHopDong.Designer.cs">
+      <DependentUpon>frmThanhLyHopDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="GiaHan_BUS.cs" />
     <Compile Include="GiaHan_DAL.cs" />
     <Compile Include="GiaHan_DTO.cs" />
+    <Compile Include="HopDong_BUS.cs" />
+    <Compile Include="HopDong_DAL.cs" />
+    <Compile Include="HopDong_DTO.cs" />
     <Compile Include="HoSo_BUS.cs" />
     <Compile Include="HoSo_DAL.cs" />
     <Compile Include="HoSo_DTO.cs" />
@@ -192,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTaiSanTheChap.resx">
       <DependentUpon>frmTaiSanTheChap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThanhLyHopDong.resx">
+      <DependentUpon>frmThanhLyHopDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

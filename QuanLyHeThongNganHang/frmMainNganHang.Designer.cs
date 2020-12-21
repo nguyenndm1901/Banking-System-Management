@@ -37,6 +37,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.thoátĐăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelTenNV = new System.Windows.Forms.Label();
+            this.btnThanhLy = new System.Windows.Forms.Button();
             this.gbServices.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -55,13 +56,14 @@
             // 
             // gbServices
             // 
+            this.gbServices.Controls.Add(this.btnThanhLy);
             this.gbServices.Controls.Add(this.btnTaiSanTheChap);
             this.gbServices.Controls.Add(this.btnHopDong);
             this.gbServices.Controls.Add(this.btnDuyetGiaHan);
             this.gbServices.Controls.Add(this.btnHoSoVayVon);
-            this.gbServices.Location = new System.Drawing.Point(12, 126);
+            this.gbServices.Location = new System.Drawing.Point(12, 102);
             this.gbServices.Name = "gbServices";
-            this.gbServices.Size = new System.Drawing.Size(403, 332);
+            this.gbServices.Size = new System.Drawing.Size(403, 367);
             this.gbServices.TabIndex = 1;
             this.gbServices.TabStop = false;
             this.gbServices.Text = "Dịch vụ:";
@@ -69,9 +71,9 @@
             // btnTaiSanTheChap
             // 
             this.btnTaiSanTheChap.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiSanTheChap.Location = new System.Drawing.Point(6, 247);
+            this.btnTaiSanTheChap.Location = new System.Drawing.Point(6, 223);
             this.btnTaiSanTheChap.Name = "btnTaiSanTheChap";
-            this.btnTaiSanTheChap.Size = new System.Drawing.Size(391, 70);
+            this.btnTaiSanTheChap.Size = new System.Drawing.Size(391, 62);
             this.btnTaiSanTheChap.TabIndex = 3;
             this.btnTaiSanTheChap.Text = "Quản Lý Tài Sản Thế Chấp";
             this.btnTaiSanTheChap.UseVisualStyleBackColor = true;
@@ -80,9 +82,9 @@
             // btnHopDong
             // 
             this.btnHopDong.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHopDong.Location = new System.Drawing.Point(6, 171);
+            this.btnHopDong.Location = new System.Drawing.Point(6, 155);
             this.btnHopDong.Name = "btnHopDong";
-            this.btnHopDong.Size = new System.Drawing.Size(391, 70);
+            this.btnHopDong.Size = new System.Drawing.Size(391, 62);
             this.btnHopDong.TabIndex = 2;
             this.btnHopDong.Text = "Hợp Đồng";
             this.btnHopDong.UseVisualStyleBackColor = true;
@@ -91,9 +93,9 @@
             // btnDuyetGiaHan
             // 
             this.btnDuyetGiaHan.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDuyetGiaHan.Location = new System.Drawing.Point(6, 95);
+            this.btnDuyetGiaHan.Location = new System.Drawing.Point(6, 87);
             this.btnDuyetGiaHan.Name = "btnDuyetGiaHan";
-            this.btnDuyetGiaHan.Size = new System.Drawing.Size(391, 70);
+            this.btnDuyetGiaHan.Size = new System.Drawing.Size(391, 62);
             this.btnDuyetGiaHan.TabIndex = 1;
             this.btnDuyetGiaHan.Text = "Duyệt Gia Hạn Nợ";
             this.btnDuyetGiaHan.UseVisualStyleBackColor = true;
@@ -104,7 +106,7 @@
             this.btnHoSoVayVon.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHoSoVayVon.Location = new System.Drawing.Point(6, 19);
             this.btnHoSoVayVon.Name = "btnHoSoVayVon";
-            this.btnHoSoVayVon.Size = new System.Drawing.Size(391, 70);
+            this.btnHoSoVayVon.Size = new System.Drawing.Size(391, 62);
             this.btnHoSoVayVon.TabIndex = 0;
             this.btnHoSoVayVon.Text = "Hồ Sơ Vay Vốn";
             this.btnHoSoVayVon.UseVisualStyleBackColor = true;
@@ -130,11 +132,22 @@
             // labelTenNV
             // 
             this.labelTenNV.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.labelTenNV.Location = new System.Drawing.Point(12, 100);
+            this.labelTenNV.Location = new System.Drawing.Point(15, 76);
             this.labelTenNV.Name = "labelTenNV";
             this.labelTenNV.Size = new System.Drawing.Size(403, 23);
             this.labelTenNV.TabIndex = 3;
-            this.labelTenNV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelTenNV.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // btnThanhLy
+            // 
+            this.btnThanhLy.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhLy.Location = new System.Drawing.Point(6, 291);
+            this.btnThanhLy.Name = "btnThanhLy";
+            this.btnThanhLy.Size = new System.Drawing.Size(391, 62);
+            this.btnThanhLy.TabIndex = 4;
+            this.btnThanhLy.Text = "Thanh Lý Hợp Đồng";
+            this.btnThanhLy.UseVisualStyleBackColor = true;
+            this.btnThanhLy.Click += new System.EventHandler(this.btnThanhLy_Click);
             // 
             // frmMainNganHang
             // 
@@ -170,5 +183,6 @@
         private System.Windows.Forms.ToolStripMenuItem thoátĐăngNhậpToolStripMenuItem;
         private System.Windows.Forms.Label labelTenNV;
         private System.Windows.Forms.Button btnTaiSanTheChap;
+        private System.Windows.Forms.Button btnThanhLy;
     }
 }

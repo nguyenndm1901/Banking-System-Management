@@ -11,7 +11,6 @@ C:\Users\Nguyen\source\repos\QuanLyHeThongNganHang\QuanLyHeThongNganHang\obj\Deb
 C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\bin\Debug\QuanLyHeThongNganHang.exe.config
 C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\bin\Debug\QuanLyHeThongNganHang.exe
 C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\bin\Debug\QuanLyHeThongNganHang.pdb
-C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.csprojAssemblyReference.cache
 C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmDangNhap.resources
 C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.Properties.Resources.resources
 C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.csproj.GenerateResource.cache
@@ -80,3 +79,4 @@ C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\o
 C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmHopDong.resources
 C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmKiemTraHoSo.resources
 C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmTaiSanTheChap.resources
+C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmThanhLyHopDong.resources

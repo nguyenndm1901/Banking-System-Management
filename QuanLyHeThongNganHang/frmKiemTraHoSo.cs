@@ -186,9 +186,17 @@ namespace QuanLyHeThongNganHang
             return true;
         }
 
+        private void showMain()
+        {
+            frmMainNganHang main = new frmMainNganHang();
+            main.ShowDialog();
+        }
+
         private void trởVềToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Thread thread = new Thread(new ThreadStart(showMain));
+            thread.Start();
+            this.Dispose();
         }
     }
 }

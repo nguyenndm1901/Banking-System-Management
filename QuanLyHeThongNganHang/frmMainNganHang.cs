@@ -97,5 +97,18 @@ namespace QuanLyHeThongNganHang
             thread.Start();
             this.Dispose();
         }
+
+        private void showThanhLy()
+        {
+            frmThanhLyHopDong thanhly = new frmThanhLyHopDong();
+            thanhly.ShowDialog();
+        }
+
+        private void btnThanhLy_Click(object sender, EventArgs e)
+        {
+            Thread thread = new Thread(new ThreadStart(showThanhLy));
+            thread.Start();
+            this.Dispose();
+        }
     }
 }
