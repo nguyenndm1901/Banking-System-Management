@@ -137,16 +137,16 @@
     <Compile Include="frmThanhLyHopDong.Designer.cs">
       <DependentUpon>frmThanhLyHopDong.cs</DependentUpon>
     </Compile>
-    <Compile Include="GiaHan_BUS.cs" />
-    <Compile Include="GiaHan_DAL.cs" />
-    <Compile Include="GiaHan_DTO.cs" />
-    <Compile Include="HopDong_BUS.cs" />
-    <Compile Include="HopDong_DAL.cs" />
-    <Compile Include="HopDong_DTO.cs" />
-    <Compile Include="HoSo_BUS.cs" />
-    <Compile Include="HoSo_DAL.cs" />
-    <Compile Include="HoSo_DTO.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="DataUsage\GiaHan_BUS.cs" />
+    <Compile Include="DataUsage\GiaHan_DAL.cs" />
+    <Compile Include="DataUsage\GiaHan_DTO.cs" />
+    <Compile Include="DataUsage\HopDong_BUS.cs" />
+    <Compile Include="DataUsage\HopDong_DAL.cs" />
+    <Compile Include="DataUsage\HopDong_DTO.cs" />
+    <Compile Include="DataUsage\HoSo_BUS.cs" />
+    <Compile Include="DataUsage\HoSo_DAL.cs" />
+    <Compile Include="DataUsage\HoSo_DTO.cs" />
+    <Compile Include="DataUsage\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmTaiSanTheChap.cs">
       <SubType>Form</SubType>
@@ -154,9 +154,9 @@
     <Compile Include="frmTaiSanTheChap.Designer.cs">
       <DependentUpon>frmTaiSanTheChap.cs</DependentUpon>
     </Compile>
-    <Compile Include="TaiSan_BUS.cs" />
-    <Compile Include="TaiSan_DAL.cs" />
-    <Compile Include="TaiSan_DTO.cs" />
+    <Compile Include="DataUsage\TaiSan_BUS.cs" />
+    <Compile Include="DataUsage\TaiSan_DAL.cs" />
+    <Compile Include="DataUsage\TaiSan_DTO.cs" />
     <EmbeddedResource Include="frmDangKyKhachHang.resx">
       <DependentUpon>frmDangKyKhachHang.cs</DependentUpon>
     </EmbeddedResource>

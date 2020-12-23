@@ -80,3 +80,4 @@ C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\o
 C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmKiemTraHoSo.resources
 C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmTaiSanTheChap.resources
 C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.frmThanhLyHopDong.resources
+C:\Users\Nguyen\Desktop\GitHub\Banking-System-Management\QuanLyHeThongNganHang\obj\Debug\QuanLyHeThongNganHang.csprojAssemblyReference.cache

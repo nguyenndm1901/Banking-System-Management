@@ -19,6 +19,8 @@ namespace QuanLyHeThongNganHang
         public delegate void sendMaHoSo(string maHoSo);
         public sendMaHoSo SenderMaHoSo;
 
+        string now = DateTime.Now.ToString("yyyy-MM-dd");
+
         public frmHopDong()
         {
             InitializeComponent();
@@ -256,7 +258,7 @@ namespace QuanLyHeThongNganHang
                 using (SqlConnection cnn = new SqlConnection(ConnectionString))
                 {
                     cnn.Open();
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO [HopDong](id,maHoSo,benA,benB,soTien,kyHan,taiSan) VALUES (@id,@maHoSo,@benA,@benB,@soTien,@kyHan,@taiSan)", cnn))
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO [HopDong](id,maHoSo,benA,benB,soTien,kyHan,taiSan,ngayKy) VALUES (@id,@maHoSo,@benA,@benB,@soTien,@kyHan,@taiSan,@ngayKy)", cnn))
                     {
                         cmd.Parameters.AddWithValue("@id", labelMaHopDong.Text.Trim());
                         cmd.Parameters.AddWithValue("@maHoSo", labelMaHoSo.Text.Trim());
@@ -265,6 +267,7 @@ namespace QuanLyHeThongNganHang
                         cmd.Parameters.AddWithValue("@soTien", labelSoTien.Text.Trim());
                         cmd.Parameters.AddWithValue("@kyHan", labelKyHan.Text.Trim());
                         cmd.Parameters.AddWithValue("@taiSan", txtTaiSan.Text.Trim());
+                        cmd.Parameters.AddWithValue("@ngayKy", now);
                         cmd.ExecuteNonQuery();
                     }
                 }
