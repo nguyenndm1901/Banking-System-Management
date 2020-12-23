@@ -33,6 +33,7 @@ CREATE TABLE HopDong(
 	[soTien] [nvarchar](15) NOT NULL,
 	[kyHan] [smallint] NOT NULL,
 	[taiSan] [nvarchar](500) NOT NULL,
+	[ngayKy] date NOT NULL,
 )
 
 CREATE TABLE HoSoVayVon(
