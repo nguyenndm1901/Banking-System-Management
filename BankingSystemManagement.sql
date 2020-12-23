@@ -67,9 +67,6 @@ INSERT [dbo].[GiaHanVayVon] ([id], [tenKH], [maHoSo], [lyDo], [kyHanCu], [kyHanM
 INSERT [dbo].[GiaHanVayVon] ([id], [tenKH], [maHoSo], [lyDo], [kyHanCu], [kyHanMoi], [ngayDangKy], [tinhTrang], [nhanVienDuyet]) VALUES (N'GH-926-52', N'Khách Hàng 2', N'HSVV-342-98', N'234', 36, 72, CAST(N'2020-12-14' AS Date), N'Đang chờ', N'Chưa xác định')
 INSERT [dbo].[GiaHanVayVon] ([id], [tenKH], [maHoSo], [lyDo], [kyHanCu], [kyHanMoi], [ngayDangKy], [tinhTrang], [nhanVienDuyet]) VALUES (N'GH-981-20', N'Khách hàng 1', N'HSVV-218-30', N'13', 13, 14, CAST(N'2020-12-14' AS Date), N'Đang chờ', N'Chưa xác định')
 GO
-INSERT [dbo].[HopDong] ([id], [maHoSo], [benA], [benB], [soTien], [kyHan], [taiSan]) VALUES (N'HD-311-1', N'HSVV-748-22', N'Ngân Hàng TMCP ANM', N'Khách Hàng 2', N'10,000,000', 12, N'Sổ đỏ | Trái phiếu')
-INSERT [dbo].[HopDong] ([id], [maHoSo], [benA], [benB], [soTien], [kyHan], [taiSan]) VALUES (N'HD-459-32', N'HSVV-342-98', N'Ngân Hàng TMCP ANM', N'Khách Hàng 2', N'20,000,000', 36, N'Sổ đỏ | Xe ô tô | Xe máy | Cổ phiếu | Trái phiếu')
-GO
 INSERT [dbo].[HoSoVayVon] ([id], [tenKH], [soTien], [ngayDangKy], [kyHan], [nhanVienDuyet], [tinhTrang]) VALUES (N'HSVV-182-5', N'Khách hàng 1', N'20000000', CAST(N'2020-11-06' AS Date), 36, N'Nhân viên 1', N'Rejected')
 INSERT [dbo].[HoSoVayVon] ([id], [tenKH], [soTien], [ngayDangKy], [kyHan], [nhanVienDuyet], [tinhTrang]) VALUES (N'HSVV-218-30', N'Khách hàng 1', N'10000000', CAST(N'2020-11-06' AS Date), 13, N'Nhân viên 1', N'Rejected')
 INSERT [dbo].[HoSoVayVon] ([id], [tenKH], [soTien], [ngayDangKy], [kyHan], [nhanVienDuyet], [tinhTrang]) VALUES (N'HSVV-238-18', N'Khách hàng 1', N'100000000', CAST(N'2020-11-06' AS Date), 72, N'Nhân viên 1', N'Rejected')
